@@ -1,0 +1,87 @@
+<!-- Weather Info Tiles -->
+#{list items:_station.latestReading(), as:'reading'}
+<section class="section p-5">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-5-desktop">
+                <div class="box has-background-dark weather-box">
+                    <h4 class="title is-2 is-uppercase has-text-weight-bold has-text-white">Weather</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box has-background-info weather-box">
+                    <h4 class="title is-2 is-uppercase has-text-weight-bold has-text-white">Latest Reading</h4>
+                    <div class="columns is-multiline">
+                        <div class="column is-6-tablet is-6-desktop">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left mr-0">
+                                        <figure class="image is-48x48"><img
+                                                src="https://appsrv1-147a1.kxcdn.com/bulma-css-starter/media/icons/users.svg"
+                                                alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content has-text-right">
+                                        <h3 class="title is-2 is-uppercase has-text-info has-text-weight-bold">Code</h3>
+                                    </div>
+                                </div>
+                                <h4 class="title">Code: ${reading.code}</h4>
+                            </div>
+                        </div>
+                        <div class="column is-6-tablet is-6-desktop">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left mr-0">
+                                        <figure class="image is-48x48"><img
+                                                src="https://appsrv1-147a1.kxcdn.com/bulma-css-starter/media/icons/file-text-o.svg"
+                                                alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content has-text-right">
+                                        <h3 class="title is-2 is-uppercase has-text-info has-text-weight-bold">Temp</h3>
+                                    </div>
+                                </div>
+                                <h4 class="title">${reading.temperature}&#176C/${reading.fahrenheit()}&#176F</h4>
+                            </div>
+                        </div>
+                        <div class="column is-6-tablet is-6-desktop">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left mr-0">
+                                        <figure class="image is-48x48"><img
+                                                src="https://appsrv1-147a1.kxcdn.com/bulma-css-starter/media/icons/calendar-o.svg"
+                                                alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content has-text-right">
+                                        <h3 class="title is-2 is-uppercase has-text-info has-text-weight-bold">Wind</h3>
+                                    </div>
+                                </div>
+                                <h4 class="title">${reading.windSpeed}km/hr ${reading.beaufort()}bft</h4>
+                            </div>
+                        </div>
+                        <div class="column is-6-tablet is-6-desktop">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left mr-0">
+                                        <figure class="image is-48x48"><img
+                                                src="https://appsrv1-147a1.kxcdn.com/bulma-css-starter/media/icons/calendar-o.svg"
+                                                alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content has-text-right">
+                                        <h3 class="title is-2 is-uppercase has-text-info has-text-weight-bold">
+                                            Pressure</h3>
+                                    </div>
+                                </div>
+                                <h4 class="title">${reading.pressure} hPa</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+#{/list}
+<!-- Weather Info Tiles End -->
