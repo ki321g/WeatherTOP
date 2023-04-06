@@ -1,0 +1,18 @@
+<table class="table is-fullwidth is-striped">
+    <thead>
+    <tr class="is-selected has-background-info is-uppercase is-size-5">
+        <th class="has-text-centered">Code</th>
+        <th class="has-text-centered">Temp</th>
+        <th class="has-text-centered">Wind Speed</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:_station.readings, as:'reading'}
+    <tr>
+        <td>${reading.code}</td>
+        <td>${reading.temperature}</td>
+        <td>${reading.windSpeed}</td>
+    </tr>
+    #{/list}
+    </tbody>
+</table>

@@ -1,0 +1,85 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"dashboard"/}
+
+<!-- Content Start -->
+<section class="section py-5">
+    <div class="container">
+
+        <!-- Hero Welcome USer -->
+        <section class="hero is-info welcome is-small">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-uppercase  is-size-3">
+                        <span class="has-text-white has-text-weight-bold">Weather</span><span
+                            class="has-text-warning">Top</span>
+                        <span class="has-text-white has-text-weight-bold">Stations</span>
+                    </h1>
+                    <h2 class="subtitle">
+                        Below is a list of all our current stations
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Welcome User End-->
+
+        #{list items:stations, as:'station'}
+        <!-- Stations -->
+        <div class="column is-12 mt-5 p-0">
+            <div class="card events-card ">
+                <header class="card-header has-background-info">
+                    <p class="card-header-title is-uppercase has-text-white is-size-3">
+                        ${station.name}
+                    </p>
+                    <a class="card-header-icon p-1" aria-label="more options">
+                <span class="icon is-large">
+                  <i class="fa-solid has-text-white fa-edit fa-2x"></i>
+                </span>
+                    </a>
+                    <a class="card-header-icon js-modal-trigger p-1" data-target="modal-cancel"
+                       aria-label="more options">
+                <span class="icon is-large" id="delete-station">
+                  <i class="fa-solid has-text-white fa-trash fa-2x"></i>
+                </span>
+                    </a>
+                </header>
+                <div class="columns is-centered">
+                    <div class="column is-centered is-11 mt-5">
+                        <div class="table-container">
+                            #{listreadings station:station/}
+                        </div>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <!-- Put More Here -->
+                </footer>
+            </div>
+        </div>
+        #{/list}
+        <!-- Stations End -->
+    </div>
+</section>
+<!-- Modal Start -->
+<div id="modal-cancel" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head has-background-info">
+            <p class="modal-card-title has-text-weight-bold is-uppercase has-text-white is-size-3">Delete Station</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content">
+                <h1>Are you sure you want to continue?</h1>
+                id:  ${station.id}, Station: ${station.name}
+            </div>
+        </section>
+        <footer class="modal-card-foot has-background-info">
+            <button class="button is-danger is-normal has-text-weight-bold is-uppercase">Delete Station</button>
+            <button class="button is-normal has-text-weight-bold is-uppercase">Cancel</button>
+        </footer>
+    </div>
+</div>
+<!-- Modal End -->
+<!-- Content End -->
