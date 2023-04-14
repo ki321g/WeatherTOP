@@ -38,6 +38,7 @@ public class Station extends Model {
   */
   public List<Reading> latestReading() {
     List<Reading> latestReadings = null;
+    //latestReadings = readings.get(readings.size() - 1).getCode();
     latestReadings = readings.subList(readings.size() - 1, readings.size());
     return latestReadings;
   }

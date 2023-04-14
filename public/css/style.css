@@ -49,9 +49,15 @@ th {
 	background: linear-gradient(to right, #5b86e5, #2160c4) !important;
 }
 
-
-
-
 .weather-box {
 	height: 100%;
+}
+
+.celsius {
+	margin-left: -20px !important;
+	margin-top: 10px !important;
+}
+.fahrenheit{
+	margin-left: -14px !important;
+	margin-top: -10px !important;
 }
