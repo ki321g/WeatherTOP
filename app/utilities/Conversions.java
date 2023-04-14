@@ -86,34 +86,7 @@ public class Conversions {
         weatherCode = "Thunder";
         break;
     }
-  /*
-    switch (code) {
-      case 100:
-        weatherCode = "Clear";
-        break;
-      case 200:
-        weatherCode = "Partial clouds";
-        break;
-      case 300:
-        weatherCode = "Cloudy";
-        break;
-      case 400:
-        weatherCode = "Light Showers";
-        break;
-      case 500:
-        weatherCode = "Heavy Showers";
-        break;
-      case 600:
-        weatherCode = "Rain";
-        break;
-      case 700:
-        weatherCode = "Snow";
-        break;
-      case 800:
-        weatherCode = "Thunder";
-        break;
-    }
-*/
+
     return weatherCode;
   }
 
