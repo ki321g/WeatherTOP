@@ -23,8 +23,8 @@ public class Reading extends Model {
     return Conversions.convertToFahrenheit(this.temperature);
   }
 
-  public int beaufort() {
-    return Conversions.convertToBeaufort(this.windSpeed);
+  public String beaufort(String returnType) {
+    return Conversions.convertToBeaufort(this.windSpeed, returnType);
   }
 
   public String weatherCode(int code) {
