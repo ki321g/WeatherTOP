@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:'Station' /}
+
+#{menu id:"dashboard"/}
+
+<!-- Content Start -->
+<section class="section py-5">
+  <div class="container">
+
+    <!-- Hero Welcome USer -->
+    <section class="hero is-info welcome is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-uppercase  is-size-3">
+            <span class="has-text-white has-text-weight-bold">Weather</span><span
+                  class="has-text-warning">Top</span>
+            <span class="has-text-white has-text-weight-bold">${station.name} Station</span>
+          </h1>
+          <h2 class="subtitle">
+            Below is a list of all your stats and readings
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Welcome User End-->
+    <!-- Station -->
+    <div class="column is-12 mt-5 p-0">
+      <div class="card events-card ">
+        <header class="card-header has-background-info mb-5">
+          <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
+            <!--${station.name}-->
+          <div class="empty-div"></div>
+          </p>
+        </header>
+        #{latestreadings station:station /}
+        <div class="columns is-centered px-5">
+          <div class="column is-centered mt-0">
+            <div class="table-container">
+              #{listreadings station:station/}
+            </div>
+          </div>
+        </div>
+        <footer class="card-footer has-background-grey mt-4">
+          <div class="empty-div is-size-4 py-2"></div>
+        </footer>
+      </div>
+    </div>
+    <!-- Station End -->
+  </div>
+</section>

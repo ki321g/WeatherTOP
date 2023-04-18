@@ -1,22 +1,68 @@
-<div class="table-container">
+<div class="table-container mb-0">
     <table class="table is-fullwidth is-bordered is-hoverable is-striped is-narrow ">
-    <thead>
-    <tr class="is-selected has-background-info is-uppercase is-size-6">
-        <th class="has-text-centered">Code</th>
-        <th class="has-text-centered">Temp</th>
-        <th class="has-text-centered">Wind Speed</th>
-        <th class="has-text-centered">Pressure</th>
-    </tr>
-    </thead>
-    <tbody>
-    #{list items:_station.readings, as:'reading'}
-    <tr>
-        <td>${reading.code}</td>
-        <td>${reading.temperature}</td>
-        <td>${reading.windSpeed}</td>
-        <td>${reading.pressure}</td>
-    </tr>
-    #{/list}
-    </tbody>
-</table>
+        <thead>
+        <tr class="is-selected has-background-info is-uppercase is-size-6">
+            <th class="has-text-centered">Code</th>
+            <th class="has-text-centered">Temp</th>
+            <th class="has-text-centered">Wind Speed</th>
+            <th class="has-text-centered">Wind Direction</th>
+            <th class="has-text-centered">Pressure</th>
+            <th class="has-text-centered">Delete Reading</th>
+        </tr>
+        </thead>
+        <tbody>
+        #{list items:_station.readings, as:'reading'}
+        <tr>
+            <td>${reading.code}</td>
+            <td>${reading.temperature}</td>
+            <td>${reading.windSpeed}</td>
+            <td>${reading.windDirection}</td>
+            <td>${reading.pressure}</td>
+            <td>
+            <!--    <a  class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
+                    data-target="modal-delete-reading" aria-label="more options"> -->
+                    <a href="/station/${_station.id}/deletereading/${reading.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
+                        data-target="modal-delete-reading" aria-label="more options">
+                  <!--  <div id="delete-reading" class="buttons has-addons is-centered"> -->
+                    <div class="buttons has-addons is-centered">
+                        <p class="control is-centered">
+                            <button class="button is-danger is-small">
+                              <span class="icon is-small">
+                                <i class="fas fa-trash"></i>
+                              </span>
+                               <span>Delete</span>
+                            </button>
+                        </p>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        #{/list}
+        </tbody>
+    </table>
 </div>
+
+<!-- Modal Start -->
+<div id="modal-delete-reading" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head has-background-info py-0">
+            <p class="modal-card-title has-text-weight-semibold	is-uppercase has-text-white is-size-5 py-4">Delete
+                Reading</p>
+            <button class="delete is-size-4" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body p-4">
+            <!-- Content ... -->
+            <div class="content">
+                <div class="is-size-4 has-text-weight-semibold has-text-centered pb-0">
+                    Are you sure you want to delete the Reading?
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot has-background-grey py-0">
+            <a href="/station/5/deletereading/1" class="card-footer-item delete-reading has-text-white is-size-6 py-2">Delete the Reading</a>
+            <a class="card-footer-item delete-reading has-text-white is-size-6 py-2">Cancel</a>
+        </footer>
+    </div>
+</div>
+<!-- Modal End -->

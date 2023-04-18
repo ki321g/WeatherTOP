@@ -17,7 +17,7 @@
                         <span class="has-text-white has-text-weight-bold">Stations</span>
                     </h1>
                     <h2 class="subtitle">
-                        Below is a list of all our current stations
+                        Below is a list of all your current stations
                     </h2>
                 </div>
             </div>
@@ -29,24 +29,16 @@
         <!-- Station#${station.id}: ${station.name} -->
         <div class="column is-12 mt-5 p-0">
             <div class="card events-card ">
-                <header class="card-header has-background-info">
+                <header class="card-header has-background-info mb-5">
                     <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
-                        <!--${station.name}-->
                     <div class="empty-div"></div>
                     </p>
                 </header>
 
-                #{latestreadings station:station /}
+                   #{latestreadings station:station /}
 
-                <div class="columns is-centered px-5">
-                    <div class="column is-centered mt-0">
-                        <div class="table-container">
-                            #{listreadings station:station/}
-                        </div>
-                    </div>
-                </div>
-                <footer class="card-footer has-background-grey">
-                    <a href="#" class="card-footer-item has-text-white is-size-6 py-0">
+                <footer class="card-footer has-background-grey mt-4">
+                    <a href="/station/${station.id}" class="card-footer-item has-text-white is-size-6 py-0">
                          <span class="icon pr-4">
                           <i class="fa-solid has-text-white fa-edit fa-lg"></i>
                         </span>
@@ -54,9 +46,10 @@
                              View Readings
                         </span>
                     </a>
-                    <a  class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
-                       data-target="modal-cancel" aria-label="more options">
-                        <div id="delete-station">
+                    <a class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
+                       data-target="modal-delete-station" data-id="delete-id" data-link="/dashboard/deletestation/${station.id}" aria-label="more options">
+                    <!--    <div id="delete-station" class="container is-fullwidth has-text-centered">   -->
+                        <div class="container is-fullwidth has-text-centered">
                            <span class="icon pr-3">
                           <i class="fa-solid has-text-white fa-trash fa-lg"></i>
                         </span>
@@ -74,30 +67,80 @@
     </div>
 </section>
 <!-- Modal Start -->
-<div id="modal-cancel" class="modal">
+<div id="modal-delete-station" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head has-background-info py-0">
-            <p class="modal-card-title has-text-weight-semibold	is-uppercase has-text-white is-size-5 py-4">Delete
+            <p class="modal-card-title has-text-weight-semi-bold	is-uppercase has-text-white is-size-5 py-4">Delete
                 Station</p>
             <button class="delete is-size-4" aria-label="close"></button>
         </header>
         <section class="modal-card-body p-4">
             <!-- Content ... -->
             <div class="content">
-                <div class="is-size-4 has-text-weight-semibold has-text-centered pb-0">
-                    Are you sure you want to delete the station?
+                <div class="is-size-4 has-text-weight-semi-bold has-text-centered pb-0">
+                    Are you sure you want to delete the Station?
                 </div>
             </div>
         </section>
         <footer class="modal-card-foot has-background-grey py-0">
-            <!--    <button class="button is-danger is-normal py-1 ">Delete Station</button>
-                <button class="button is-normal py-1 ">Cancel</button>
-                -->
-            <a href="#" class="card-footer-item deleteStation has-text-white is-size-6 py-2">Delete the Station</a>
-            <a class="card-footer-item deleteStation has-text-white is-size-6 py-2">Cancel</a>
+            <a class="card-footer-item delete-station has-text-white is-size-6 py-2">Delete the Station</a>
+            <a class="card-footer-item has-text-white is-size-6 py-2">Cancel</a>
         </footer>
     </div>
 </div>
 <!-- Modal End -->
 <!-- Content End -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                closeModal($modal);
+            });
+        }
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const link = $trigger.dataset.link;
+        //    const name = $trigger.dataset.name;
+            const $target = document.getElementById(modal);
+
+
+            $trigger.addEventListener('click', () => {
+                document.getElementById("delete-station").href = link;
+             //   document.getElementById("demo").innerHTML = "Are your sure you want to delete the " + name + "?";
+                openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+                closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            const e = event || window.event;
+
+            if (e.keyCode === 27) { // Escape key
+                closeAllModals();
+            }
+        });
+    });
+
+</script>

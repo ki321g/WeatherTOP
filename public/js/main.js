@@ -3,12 +3,11 @@
 const burgerIcon = document.querySelector('#burger');
 const navbarMenu = document.querySelector('#nav-links');
 const deleteStation = document.querySelector('#delete-station');
-
+const deleteReading = document.querySelector('#delete-reading');
 burgerIcon.addEventListener('click', () => {
 	navbarMenu.classList.toggle('is-active');
 });
-
-
+/*
 deleteStation.addEventListener('click', () => {
 	// Functions to open and close a modal
 	function openModal($el) {
@@ -37,7 +36,7 @@ deleteStation.addEventListener('click', () => {
 	// Add a click event on various child elements to close the parent modal
 	(
 		document.querySelectorAll(
-			'.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .deleteStation'
+			'.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .delete-station'
 		) || []
 	).forEach(($close) => {
 		const $target = $close.closest('.modal');
@@ -57,3 +56,9 @@ deleteStation.addEventListener('click', () => {
 		}
 	});
 });
+deleteReading.addEventListener('click', () => {
+	const modalDisplay = document.querySelector('#modal-delete-reading')
+	modalDisplay.classList.toggle('is-active');
+});
+*/
+
