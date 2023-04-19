@@ -8,7 +8,7 @@
                     <div class="columns is-gapless is-multiline is-mobile has-text-white">
                         <div class="column is-full">
                             <div class="columns is-gapless  is-vcentered">
-                                <div class="column is-three-quarters">
+                                <div class="column is-two-thirds">
                                     <!-- content for the Station name -->
                                     <h4 class="title is-2 is-uppercase has-text-weight-bold has-text-white">
                                         ${_station.name}</h4>
@@ -32,50 +32,57 @@
                                         <!-- content for Longitude -->
                                         -7.21
                                     </div>
-                                </div>                            </div>
+                                </div>
+                            </div>
                         </div>
                         <!--    <div class="column is-one-quarter"></div>   -->
-                        <div class="column is-half has-text-centered">
+                        <div class="column is-one-third has-text-centered">
                             <hr class="mt-3 mb-0">
                             <img src="/public/images/weathericons/weather-${reading.code}.svg" alt="weather"
                                  style="max-height: 180px;"
                                  class="">
                         </div>
-                        <div class="column is-half has-text-centered">
+                        <div class="column is-one-third has-text-centered">
+                            <hr class="mt-3 mb-0">
+                            <img src="/public/images/weathericons/compass-${reading.windCompassDirection()}.svg" alt="wind"
+                                 style="max-height: 180px;"
+                                 class="">
+                        </div>
+                        <div class="column is-one-third has-text-centered">
                             <hr class="mt-3 mb-0">
                             <img src="/public/images/weathericons/wind-beaufort-${reading.beaufort()}.svg" alt="wind"
                                  style="max-height: 180px;"
                                  class="">
                         </div>
-                        <div class="column is-half is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
+                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
                             <p>${reading.weatherCode(reading.code)}</p>
-                            <hr class="mt-3 mb-0">
+                            <hr class="mt-4 mb-0">
                         </div>
-                        <div class="column is-half is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
-                            <!-- <p>${reading.beaufort()}</p> -->
+                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
+                            <p>${reading.windCompassDirection()}</p>
+                            <hr class="mt-4 mb-0">
+                        </div>
+                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
                             <p>${reading.beaufort("label")}</p>
-                            <hr class="mt-3 mb-0">
+                            <hr class="mt-4 mb-0">
                         </div>
-                        <div class="column is-two-fifths has-text-centered has-text-weight-bold">
+                        <div class="column is-half has-text-centered has-text-weight-bold">
                             <div class="is-size-1 is-flex is-vcentered is-justify-content-center">
                                 ${reading.temperature}<!--&#176C-->
-                                <img class="celsius" src="/public/images/weathericons/thermometer-celsius.svg" style="max-height: 60px;">
+                                <img class="celsius" src="/public/images/weathericons/thermometer-celsius.svg"
+                                     style="max-height: 60px;">
                             </div>
                             <div class="is-flex is-vcentered is-justify-content-center">
                                 ${reading.fahrenheit()}<!--&#176F-->
-                                <img class="fahrenheit" src="/public/images/weathericons/thermometer-fahrenheit.svg" style="max-height: 40px;">
+                                <img class="fahrenheit" src="/public/images/weathericons/thermometer-fahrenheit.svg"
+                                     style="max-height: 40px;">
                             </div>
                         </div>
-                        <div class="column is-two-fifths has-text-centered has-text-weight-bold">
+                        <div class="column is-half has-text-centered has-text-weight-bold">
                             <div class="is-size-1 is-flex is-vcentered is-justify-content-center">
                                 ${reading.pressure}
                             </div>
                             <div class="">hPa</div>
-                        </div>
-                        <div class="column is-one-fifths has-text-centered is-vcentered">
-                            <figure class="image is-vcentered">
-                                <img src="/public/images/weathericons/compass-N.svg" style="max-height: 100px;">
-                            </figure>
                         </div>
                     </div>
 
@@ -84,7 +91,6 @@
             <div class="column">
                 <div class="box has-background-info weather-box">
                     <h4 class="title is-3 is-uppercase has-text-weight-bold has-text-white mb-3">Latest Reading</h4>
-
                     <table class="table latest-reading is-fullwidth is-bordered">
                         <tbody>
                         <tr>
@@ -143,9 +149,10 @@
                                 </div>
                             </td>
                             <td class="is-vcentered">
-                                ${reading.windSpeed} km/hr <br>
-                                ${reading.beaufort()} bft <br>
-                                ${reading.beaufort("label")}
+                                ${reading.windSpeed} km/hr or ${reading.beaufort()} bft <br>
+                                ${reading.beaufort("label")}<br>
+                                Feels Like: ${reading.windChill()}&#176C<br>
+                                Direction: ${reading.windCompassDirection()} ${reading.windDirection}&#176
                             </td>
                         </tr>
                         <tr>

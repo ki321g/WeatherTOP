@@ -41,6 +41,7 @@ public class Station extends Model {
     //latestReadings = readings.get(readings.size() - 1).getCode();
     if (readings.size() > 0) {
       latestReadings = readings.subList(readings.size() - 1, readings.size());
+      //  latestReadings = readings.(readings.size() - 1);
     }
     return latestReadings;
   }

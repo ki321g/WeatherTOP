@@ -34,12 +34,12 @@ public class Reading extends Model {
     return Conversions.convertWeatherCode(code);
   }
 
-  public String windCompass ()  {
+  public String windCompassDirection() {
     return Conversions.convertDegreeToDirection(this.windDirection);
   }
 
-  public double windChill ()  {
-    return Conversions.calculateWindChill(this.temperature,this.windSpeed);
+  public double windChill() {
+    return Conversions.calculateWindChill(this.temperature, this.windSpeed);
   }
 
   /**** Getters ****/

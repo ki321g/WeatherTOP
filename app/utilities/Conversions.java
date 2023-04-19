@@ -3,44 +3,44 @@ package utilities;
 public class Conversions {
   public static String convertToBeaufort(double windSpeed, String returnType) {
     int bf = 0;
-    String bfLabel  = "";
+    String bfLabel = "";
 
     if (windSpeed == 1) {
       bf = 0;
-      bfLabel= "Calm";
+      bfLabel = "Calm";
     } else if (windSpeed >= 2 && windSpeed <= 5) {
       bf = 1;
-      bfLabel= "Light Air";
+      bfLabel = "Light Air";
     } else if (windSpeed >= 6 && windSpeed <= 11) {
       bf = 2;
-      bfLabel= "Light Breeze";
+      bfLabel = "Light Breeze";
     } else if (windSpeed >= 12 && windSpeed <= 19) {
       bf = 3;
-      bfLabel= "Gentle Breeze";
+      bfLabel = "Gentle Breeze";
     } else if (windSpeed >= 20 && windSpeed <= 28) {
       bf = 4;
-      bfLabel= "Moderate Breeze";
+      bfLabel = "Moderate Breeze";
     } else if (windSpeed >= 29 && windSpeed <= 38) {
       bf = 5;
-      bfLabel= "Fresh Breeze";
+      bfLabel = "Fresh Breeze";
     } else if (windSpeed >= 39 && windSpeed <= 49) {
       bf = 6;
-      bfLabel= "Strong Breeze";
+      bfLabel = "Strong Breeze";
     } else if (windSpeed >= 50 && windSpeed <= 61) {
       bf = 7;
-      bfLabel= "Near Gale";
+      bfLabel = "Near Gale";
     } else if (windSpeed >= 62 && windSpeed <= 74) {
       bf = 8;
-      bfLabel= "Gale";
+      bfLabel = "Gale";
     } else if (windSpeed >= 75 && windSpeed <= 88) {
       bf = 9;
-      bfLabel= "Severe Gale";
+      bfLabel = "Severe Gale";
     } else if (windSpeed >= 89 && windSpeed <= 102) {
       bf = 10;
-      bfLabel= "Strong Storm";
+      bfLabel = "Strong Storm";
     } else if (windSpeed >= 103 && windSpeed <= 117) {
       bf = 11;
-      bfLabel= "Violent Storm";
+      bfLabel = "Violent Storm";
     }
 
     if (returnType == "label") {
@@ -126,18 +126,17 @@ public class Conversions {
     } else if (windDirection >= 326.25 && windDirection < 348.75) {
       windDirectionText = "NNW";
     } else {
-      windDirectionText =  "Out of Range";
+      windDirectionText = "Out of Range";
     }
 
     return windDirectionText;
   }
-
   public static double calculateWindChill(double temperature, double windSpeed) {
-    double calc = 13.12 + (0.6215 * temperature)
-        - 11.37 * (Math.pow(windSpeed, 0.16))
-        + 0.3965 * temperature * (Math.pow(windSpeed, 0.16));
-
-    return Math.round(calc * 100.0) / 100.0;
+    return roundCalculation(13.12 + (0.6215 * temperature) - 11.37 * (Math.pow(windSpeed, 0.16)) + 0.3965 * temperature * (Math.pow(windSpeed, 0.16)),2);
   }
-  
+  public static double roundCalculation(double value, int places) {
+    double scale = Math.pow(10, places);
+    return Math.round(value * scale) / scale;
+  }
 }
+
