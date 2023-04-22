@@ -14,19 +14,29 @@ public class Station extends Model {
   public String name;
   public double latitude;
   public double longitude;
+
   @OneToMany(cascade = CascadeType.ALL)
   public List<Reading> readings = new ArrayList<Reading>();
-/*
+
+  public double minTemperature;
+  public double maxTemperature;
+
+  public int minPressure;
+  public int maxPressure;
+
+  public double minWindSpeed;
+  public double maxWindSpeed;
+
   public Station(String name, double latitude, double longitude) {
     this.name = name;
     this.latitude = latitude;
     this.longitude = longitude;
   }
- */
+/*
   public Station(String name) {
     this.name = name;
   }
-
+ */
 
   public String getName() {
     return name;

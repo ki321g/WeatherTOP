@@ -4,6 +4,7 @@ import play.*;
 import play.mvc.*;
 import java.util.*;
 import models.*;
+import utilities.Calculations;
 
 import java.util.List;
 
@@ -11,12 +12,13 @@ public class StationCtrl extends Controller {
   public static void index(Long id) {
     Station station = Station.findById(id);
     Logger.info("Station id = " + id);
+    Calculations.calculateConditions(station);
     render("station.html", station);
   }
 
-  public static void addStation(String name) {
+  public static void addStation(String name, double latitude, double longitude) {
     Logger.info("Adding Station: " + name);
-    Station station = new Station(name);
+    Station station = new Station(name, latitude, longitude);
     station.save();
 
     redirect("/station/" + station.id);

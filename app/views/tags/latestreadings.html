@@ -26,11 +26,11 @@
                                 <div class="column">
                                     <div class="column has-text-weight-bold has-text-right py-0 px-2">
                                         <!-- content for the Latitude -->
-                                        <!-- c ${_station.latitude}-->52.162
+                                          ${_station.latitude} <!-- 52.162 -->
                                     </div>
                                     <div class="column has-text-weight-bold has-text-right py-0 px-2">
                                         <!-- content for Longitude -->
-                                        <!-- c  ${_station.longitude}-->-7.152
+                                           ${_station.longitude}  <!-- -7.152 -->
                                     </div>
                                 </div>
                             </div>
@@ -192,73 +192,73 @@
                                     <div class="columns is-flex">
                                         <div class="column is-half has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
-                                                800
+                                                ${_station.minTemperature}
                                             </div>
                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
                                         </div>
                                         <div class="column is-half has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
-                                                800
-                                            </div>
-                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card events-card mb-2">
-                            <header class="card-header has-background-dark">
-                                <p class="card-header-title is-centered is-uppercase has-text-white">
-                                    Wind Speed Stats
-                                </p>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="columns is-flex">
-                                        <div class="column is-half has-text-centered py-0">
-                                            <div class="is-size-4 has-text-weight-bold">
-                                                800
-                                            </div>
-                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
-                                        </div>
-                                        <div class="column is-half has-text-centered py-0">
-                                            <div class="is-size-4 has-text-weight-bold">
-                                                800
-                                            </div>
-                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card events-card mb-2">
-                            <header class="card-header has-background-dark">
-                                <p class="card-header-title is-centered is-uppercase has-text-white">
-                                    Pressure Stats
-                                </p>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="columns is-flex">
-                                        <div class="column is-half has-text-centered py-0">
-                                            <div class="is-size-4 has-text-weight-bold">
-                                                800
-                                            </div>
-                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
-                                        </div>
-                                        <div class="column is-half has-text-centered py-0">
-                                            <div class="is-size-4 has-text-weight-bold">
-                                                800
-                                            </div>
-                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- READINGS & STATS END -->
+                                                ${_station.maxTemperature}
+                                             </div>
+                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="card events-card mb-2">
+                             <header class="card-header has-background-dark">
+                                 <p class="card-header-title is-centered is-uppercase has-text-white">
+                                     Wind Speed Stats
+                                 </p>
+                             </header>
+                             <div class="card-content">
+                                 <div class="content">
+                                     <div class="columns is-flex">
+                                         <div class="column is-half has-text-centered py-0">
+                                             <div class="is-size-4 has-text-weight-bold">
+                                                 ${_station.minWindSpeed}
+                                             </div>
+                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
+                                         </div>
+                                         <div class="column is-half has-text-centered py-0">
+                                             <div class="is-size-4 has-text-weight-bold">
+                                                 ${_station.maxWindSpeed}
+                                             </div>
+                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="card events-card mb-2">
+                             <header class="card-header has-background-dark">
+                                 <p class="card-header-title is-centered is-uppercase has-text-white">
+                                     Pressure Stats
+                                 </p>
+                             </header>
+                             <div class="card-content">
+                                 <div class="content">
+                                     <div class="columns is-flex">
+                                         <div class="column is-half has-text-centered py-0">
+                                             <div class="is-size-4 has-text-weight-bold">
+                                                 ${_station.minPressure}
+                                             </div>
+                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
+                                         </div>
+                                         <div class="column is-half has-text-centered py-0">
+                                             <div class="is-size-4 has-text-weight-bold">
+                                                 ${_station.maxPressure}
+                                             </div>
+                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- READINGS & STATS END -->
 
             </div>
         </div>
