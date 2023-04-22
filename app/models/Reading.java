@@ -18,7 +18,7 @@ public class Reading extends Model {
   public int pressure;
   public Reading(int code, double temperature, double windSpeed, double windDirection, int pressure) {
     //https://howtodoinjava.com/java/date-time/java8-datetimeformatter-example/
-    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss"); //Create DateTimeFormatter
+    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
     this.dateTime  = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
 
     this.code = code;
