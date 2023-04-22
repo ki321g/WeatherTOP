@@ -37,8 +37,19 @@
                     <div class="empty-div"></div>
                     </p>
                 </header>
-
-                   #{latestreadings station:station /}
+                #{if station.readings.size() > 0}
+                    #{latestreadings station:station /}
+                #{/if}
+                #{else}
+                <div class="container">
+                    <a href="/station/${station.id}">
+                        <div class="tags has-addons is-centered">
+                            <span  class="tag has-background-grey is-large is-uppercase has-text-weight-bold has-text-white m-0">Station: ${station.name}, No Readings Recorded</span>
+                            <span class="tag is-info is-large has-text-weight-bold is-uppercase has-text-weight-bold  has-text-white m-0">Click Here to Add A Reading</span>
+                        </div>
+                    </a>
+                </div>
+                #{/else}
 
                 <footer class="card-footer has-background-grey mt-4">
                     <a href="/station/${station.id}" class="card-footer-item has-text-white is-size-6 py-0">
@@ -46,7 +57,7 @@
                           <i class="fa-solid has-text-white fa-edit fa-lg"></i>
                         </span>
                         <span class="m-1">
-                             View Readings
+                             View/Add Readings
                         </span>
                     </a>
                     <a href="/dashboard/deletestation/${station.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
