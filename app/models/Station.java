@@ -1,12 +1,14 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import play.Logger;
 import play.db.jpa.Model;
 
 @Entity
@@ -57,12 +59,16 @@ public class Station extends Model {
   */
   public List<Reading> latestReading() {
     List<Reading> latestReadings = null;
-    //latestReadings = readings.get(readings.size() - 1).getCode();
     if (readings.size() > 0) {
       latestReadings = readings.subList(readings.size() - 1, readings.size());
-      //  latestReadings = readings.(readings.size() - 1);
     }
     return latestReadings;
+  }
+
+  public static List<Station> sortStations(List<Station> stations) {
+    stations.sort(Comparator.comparing(Station::getName, String.CASE_INSENSITIVE_ORDER));
+    Logger.info("Sorting Stations Alphabetically");
+    return stations;
   }
 }
 
