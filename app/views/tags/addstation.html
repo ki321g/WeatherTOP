@@ -1,0 +1,54 @@
+<div class="column is-12 mt-3 mb-5 p-0">
+    <div class="card events-card ">
+        <header class="card-header has-background-info mb-2">
+            <p class="card-header-title is-uppercase has-text-white is-size-4 py-1">
+            <div class="empty-div">
+                <!-- Empty Div used for card header blue line-->
+            </div>
+            </p>
+        </header>
+        <section class="columns is-centered">
+            <div class="column is-12">
+                <form name="addStation" action="/dashboard/addstation" onsubmit="return validateStationForm()"
+                      method="POST">
+                    <div class="field is-horizontal mx-4 my-0">
+                        <div class="field-body is-centered">
+                            <div class="field">
+                                <label class="label mb-0">Station Name</label>
+                                <div class="control">
+                                    <input id="newName" type="text" class="input" placeholder="Enter Station Name..." name="name">
+                                    <div id="errName" class="showError"></div>
+                                </div>
+                            </div>
+                            <!--
+                           <div class="field">
+                              <label class="label mb-0">Latitude</label>
+                              <div class="control">
+                                <input id="newLatitude" type="text" class="input" placeholder="000.000&#176C"
+                                  name="latitude" min="0" type="number">
+                                <div id="errLatitude" class="showError"></div>
+                              </div>
+                            </div>
+                            <div class="field">
+                              <label class="label mb-0">Longitude</label>
+                              <div class="control">
+                                <input id="newLongitude" type="text" class="input" placeholder="000.000&#176C" name="longitude" min="0"
+                                  type="number">
+                                <div id="errLongitude" class="showError"></div>
+                              </div>
+                            </div>
+                          -->
+                        </div>
+                    </div>
+
+                    <div class="column is-12 py-2">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-fullwidth is-info">Add Station</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </section>
+    </div>
+</div>

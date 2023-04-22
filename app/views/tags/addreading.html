@@ -1,0 +1,75 @@
+<div class="column is-12 px-5 pb-5">
+  <div class="card events-card ">
+    <header class="card-header has-background-info mb-2">
+      <p class="card-header-title is-uppercase has-text-white is-size-4 py-1">
+      <div class="empty-div">
+        <!-- Empty Div used for card header blue line-->
+      </div>
+      </p>
+    </header>
+    <section class="columns is-centered">
+      <div class="column is-12 pb-0">
+        <form name="addSong" action="/station/${_station.id}/addreading" onsubmit="return validateSongForm()"
+              method="POST">
+          <div class="field is-horizontal mx-4 my-0">
+            <div class="field-body is-centered">
+              <div class="field">
+                <label class="label mb-0">Code</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select name="code">
+                      <option value="100">100 - Clear</option>
+                      <option value="200">200 - Partial Clouds</option>
+                      <option value="300">300 - Cloudy</option>
+                      <option value="400">400 - Light Showers</option>
+                      <option value="500">500 - Heavy Showers</option>
+                      <option value="600">600 - Rain</option>
+                      <option value="700">700 - Snow</option>
+                      <option value="800">800 - Thunder</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label mb-0">Temperature</label>
+                <div class="control">
+                  <input id="newTemperature" type="text" class="input" placeholder="000.00&#176C" name="temperature">
+                  <div id="errTemperature" class="showError"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label mb-0">Wind Speed</label>
+                <div class="control">
+                  <input id="newWindSpeed" type="text" class="input" placeholder="000.00 km/hr" name="windSpeed">
+                  <div id="errWindSpeed" class="showError"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label mb-0">Wind Direction</label>
+                <div class="control">
+                  <input id="newWindDirection" type="text" class="input" placeholder="000.00&#176"
+                         name="windDirection" min="0" type="number">
+                  <div id="errWindDirection" class="showError"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label mb-0">Pressure</label>
+                <div class="control">
+                  <input id="newPressure" type="text" class="input" placeholder="0000 hPa" name="pressure" min="0"
+                         type="number">
+                  <div id="errPressure" class="showError"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12 py-2">
+            <div class="field">
+              <div class="control">
+                <button class="button is-fullwidth is-info">Add Reading</button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </section>
+  </div>
+</div>

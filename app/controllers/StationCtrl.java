@@ -14,6 +14,13 @@ public class StationCtrl extends Controller {
     render("station.html", station);
   }
 
+  public static void addStation(String name) {
+    Logger.info("Adding Station: " + name);
+    Station station = new Station(name);
+    station.save();
+
+    redirect("/station/" + station.id);
+  }
   public static void deletestation(Long id) {
     Station station;
     if (Station.findById(id) != null) {
@@ -40,6 +47,16 @@ public class StationCtrl extends Controller {
     } else {
       Logger.info("Reading id# " + readingid + " doesnt exist");
     }
+    redirect("/station/" + id);
+  }
+
+  public static void addReading(Long id, int code, double temperature, double windSpeed, double windDirection, int pressure) {
+    Logger.info("Adding Reading: " + id);
+
+    Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure);
+    Station station = Station.findById(id);
+    station.readings.add(reading);
+    station.save();
     redirect("/station/" + id);
   }
 }

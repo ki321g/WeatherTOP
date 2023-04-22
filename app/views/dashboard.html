@@ -4,7 +4,7 @@
 #{menu id:"dashboard"/}
 
 <!-- Content Start -->
-<section class="section py-5">
+<section class="section py-3">
     <div class="container">
 
         <!-- Hero Welcome USer -->
@@ -25,11 +25,14 @@
         <!-- Hero Welcome User End-->
 
         <!-- Stations -->
+        <!-- ADD Station -->
+        #{addstation station:station /}
+        <!-- List Stations -->
         #{list items:stations, as:'station'}
         <!-- Station#${station.id}: ${station.name} -->
-        <div class="column is-12 mt-5 p-0">
+        <div class="column is-12 mt-3 p-0">
             <div class="card events-card ">
-                <header class="card-header has-background-info mb-5">
+                <header class="card-header has-background-info mb-2">
                     <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
                     <div class="empty-div"></div>
                     </p>
@@ -46,7 +49,7 @@
                              View Readings
                         </span>
                     </a>
-                    <a class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
+                    <a href="/dashboard/deletestation/${station.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
                        data-target="modal-delete-station" data-id="delete-id" data-link="/dashboard/deletestation/${station.id}" aria-label="more options">
                     <!--    <div id="delete-station" class="container is-fullwidth has-text-centered">   -->
                         <div class="container is-fullwidth has-text-centered">

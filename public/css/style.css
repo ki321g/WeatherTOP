@@ -26,15 +26,16 @@ table,
 td,
 th {
 	border: 1px solid #ddd;
-	text-align: center;
-	width: 15%;
+/*	text-align: center;
+	width: 15%;*/
 	padding: 5px;
 }
-/*
-th {
-	background: hsl(204, 86%, 53%);
-}
-*/
+
+	/*
+    th {
+        background: hsl(204, 86%, 53%);
+    }
+    */
 .main-navbar:hover {
 	background: hsl(207, 61%, 48%) !important;
 }

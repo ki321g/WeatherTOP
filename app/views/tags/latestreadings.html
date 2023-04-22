@@ -2,15 +2,15 @@
 #{list items:_station.latestReading(), as:'reading'}
 <section class="section px-5 py-0">
     <div class="container">
-        <div class="columns">
-            <div class="column is-5-desktop">
-                <div class="box has-background-dark weather-box">
+        <div class="columns is-multiline">
+            <div class="column is-5-desktop is-full-tablet">
+                <div class="box has-background-dark weather-box pb-3">
                     <div class="columns is-gapless is-multiline is-mobile has-text-white">
-                        <div class="column is-full">
-                            <div class="columns is-gapless  is-vcentered">
-                                <div class="column is-two-thirds">
+                        <div class="column is-full mb-0">
+                            <div class="columns is-mobile is-gapless is-vcentered">
+                                <div class="column is-three-fifths is-one-thirds-mobile">
                                     <!-- content for the Station name -->
-                                    <h4 class="title is-2 is-uppercase has-text-weight-bold has-text-white">
+                                    <h4 class="title is-size-3-desktop is-size-5-mobile is-size-5-tablet is-uppercase has-text-weight-bold has-text-white">
                                         ${_station.name}</h4>
                                 </div>
                                 <div class="column">
@@ -26,48 +26,51 @@
                                 <div class="column">
                                     <div class="column has-text-weight-bold has-text-right py-0 px-2">
                                         <!-- content for the Latitude -->
-                                        52.1
+                                        <!-- c ${_station.latitude}-->52.162
                                     </div>
                                     <div class="column has-text-weight-bold has-text-right py-0 px-2">
                                         <!-- content for Longitude -->
-                                        -7.21
+                                        <!-- c  ${_station.longitude}-->-7.152
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--    <div class="column is-one-quarter"></div>   -->
                         <div class="column is-one-third has-text-centered">
-                            <hr class="mt-3 mb-0">
+                            <hr class="mt-1 mb-0">
                             <img src="/public/images/weathericons/weather-${reading.code}.svg" alt="weather"
                                  style="max-height: 180px;"
                                  class="">
                         </div>
                         <div class="column is-one-third has-text-centered">
-                            <hr class="mt-3 mb-0">
-                            <img src="/public/images/weathericons/compass-${reading.windCompassDirection()}.svg" alt="wind"
-                                 style="max-height: 180px;"
-                                 class="">
+                            <hr class="mt-1 mb-0">
+                            <img src="/public/images/weathericons/compass-${reading.windCompassDirection()}.svg"
+                                 alt="wind direction"
+                                 style="max-height: 180px;" class="">
                         </div>
                         <div class="column is-one-third has-text-centered">
-                            <hr class="mt-3 mb-0">
-                            <img src="/public/images/weathericons/wind-beaufort-${reading.beaufort()}.svg" alt="wind"
-                                 style="max-height: 180px;"
-                                 class="">
+                            <hr class="mt-1 mb-0">
+                            <img src="/public/images/weathericons/wind-beaufort-${reading.beaufort()}.svg"
+                                 alt="wind speed"
+                                 style="max-height: 180px;" class="">
                         </div>
-                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
+                        <div class="column is-one-third is-size-6-mobile is-size-5 has-text-weight-bold has-text-centered ">
                             <p>${reading.weatherCode(reading.code)}</p>
-                            <hr class="mt-4 mb-0">
+
                         </div>
-                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
+                        <div class="column is-one-third is-size-6-mobile is-size-5 has-text-weight-bold has-text-centered ">
                             <p>${reading.windCompassDirection()}</p>
-                            <hr class="mt-4 mb-0">
+
                         </div>
-                        <div class="column is-one-third is-size-6-mobile is-size-4 has-text-weight-bold has-text-centered ">
+                        <div class="column is-one-third is-size-6-mobile is-size-5 has-text-weight-bold has-text-centered ">
                             <p>${reading.beaufort("label")}</p>
-                            <hr class="mt-4 mb-0">
+
+                        </div>
+                        <div class="column is-12 has-text-centered">
+                            <hr class="mt-1 mb-0">
                         </div>
                         <div class="column is-half has-text-centered has-text-weight-bold">
-                            <div class="is-size-1 is-flex is-vcentered is-justify-content-center">
+                            <div class="is-size-2 is-flex is-vcentered is-justify-content-center">
                                 ${reading.temperature}<!--&#176C-->
                                 <img class="celsius" src="/public/images/weathericons/thermometer-celsius.svg"
                                      style="max-height: 60px;">
@@ -79,7 +82,7 @@
                             </div>
                         </div>
                         <div class="column is-half has-text-centered has-text-weight-bold">
-                            <div class="is-size-1 is-flex is-vcentered is-justify-content-center">
+                            <div class="is-size-2 is-flex is-vcentered is-justify-content-center">
                                 ${reading.pressure}
                             </div>
                             <div class="">hPa</div>
@@ -89,93 +92,174 @@
                 </div>
             </div>
             <div class="column">
-                <div class="box has-background-info weather-box">
-                    <h4 class="title is-3 is-uppercase has-text-weight-bold has-text-white mb-3">Latest Reading</h4>
-                    <table class="table latest-reading is-fullwidth is-bordered">
-                        <tbody>
-                        <tr>
-                            <td class="has-background-grey has-text-white is-vcentered">
-                                <!-- Code -->
-                                <div class="columns is-vcentered">
-                                    <div class="column is-3">
-                                        <figure class="image">
-                                            <img src="/public/images/weathericons/weather-${reading.code}.svg"
-                                                 alt="weather"
-                                                 style="max-height: 64px;">
-                                        </figure>
+
+                <!-- READINGS & STATS -->
+                <div class="columns">
+                    <div class="column is-flex is-7-desktop">
+                        <!-- Box in the left column -->
+                        <div class="card events-card" style="height:100%; width: 100%;">
+                            <header class="card-header has-background-dark">
+                                <p class="card-header-title is-centered  is-uppercase has-text-white">
+                                    Latest Reading
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="table-container is-fullwidth">
+                                        <table class="table is-fullwidth">
+                                            <tbody>
+                                            <tr>
+                                                <td class="set-width has-background-dark has-text-centered has-text-white is-vcentered is-uppercase has-text-weight-bold p-0"
+                                                        style="width: 15%;">
+                                                    <img src="/public/images/weathericons/weather-${reading.code}.svg"
+                                                         alt="weather">
+                                                </td>
+                                                <td
+                                                        class="set-width has-background-dark has-text-white is-vcentered is-uppercase has-text-weight-bold pl-0"
+                                                        style="width: 25%;">Code
+                                                </td>
+                                                <td class="is-vcentered" style="width: 60%;">
+                                                    ${reading.code} <br>
+                                                    ${reading.weatherCode(reading.code)}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                        class="set-width has-background-dark has-text-centered has-text-white is-vcentered is-uppercase has-text-weight-bold p-0"
+                                                        style="width: 10%;">
+                                                    <img src="/public/images/weathericons/thermometer.svg"
+                                                         alt="temperature">
+                                                </td>
+                                                <td
+                                                        class="set-width has-background-dark has-text-white is-vcentered is-uppercase has-text-weight-bold pl-0"
+                                                        style="width: 30%;">Temperature
+                                                </td>
+                                                <td class="is-vcentered" style="width: 60%;">
+                                                    ${reading.temperature} &#176C <br>
+                                                    ${reading.fahrenheit()} &#176F
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                        class="set-width has-background-dark has-text-centered has-text-white is-vcentered is-uppercase has-text-weight-bold p-0"
+                                                        style="width: 10%;">
+                                                    <img src="/public/images/weathericons/wind-beaufort-${reading.beaufort()}.svg"
+                                                         alt="wind">
+                                                </td>
+                                                <td
+                                                        class="set-width has-background-dark has-text-white is-vcentered is-uppercase has-text-weight-bold pl-0"
+                                                        style="width: 30%;">Wind
+                                                </td>
+                                                <td class="is-vcentered" style="width: 60%;">
+                                                    ${reading.windSpeed} km/hr or ${reading.beaufort()} bft <br>
+                                                    ${reading.beaufort("label")}<br>
+                                                    Feels Like: ${reading.windChill()}&#176C<br>
+                                                    Direction: ${reading.windCompassDirection()}
+                                                    ${reading.windDirection}&#176
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                        class="set-width has-background-dark has-text-centered has-text-white is-vcentered is-uppercase has-text-weight-bold p-0"
+                                                        style="width: 10%;">
+                                                    <img src="/public/images/weathericons/barometer.svg" alt="pressure">
+                                                </td>
+                                                <td
+                                                        class="set-width has-background-dark has-text-white is-vcentered is-uppercase has-text-weight-bold pl-0"
+                                                        style="width: 30%;">Pressure
+                                                </td>
+                                                <td class="is-vcentered" style="width: 60%;">
+                                                    ${reading.pressure} hPa
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="column is-vcentered is-uppercase has-text-weight-bold">
-                                        Code
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card events-card mb-2">
+                            <header class="card-header has-background-dark">
+                                <p class="card-header-title is-centered  is-uppercase has-text-white">
+                                    Temperature Stats
+                                </p>
+                            </header>
+                            <div class="card-content p-4">
+                                <div class="content">
+                                    <div class="columns is-flex">
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
+                                        </div>
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </td>
-                            <td class="is-vcentered">
-                                ${reading.code} <br>
-                                ${reading.weatherCode(reading.code)}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="has-background-grey has-text-white is-vcentered">
-                                <!-- Temperature -->
-                                <div class="columns is-vcentered">
-                                    <div class="column is-3">
-                                        <figure class="image">
-                                            <img src="/public/images/weathericons/thermometer.svg" alt="temperature">
-                                        </figure>
-                                    </div>
-                                    <div class="column is-vcentered is-uppercase has-text-weight-bold">
-                                        Temperature
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="is-vcentered">
-                                ${reading.temperature} &#176C <br>
-                                ${reading.fahrenheit()} &#176F
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="has-background-grey has-text-white is-vcentered">
-                                <!-- Wind -->
-                                <div class="columns is-vcentered">
-                                    <div class="column is-3">
-                                        <figure class="image">
-                                            <img src="/public/images/weathericons/wind-beaufort-${reading.beaufort()}.svg"
-                                                 alt="wind">
-                                        </figure>
-                                    </div>
-                                    <div class="column is-vcentered is-uppercase has-text-weight-bold">
-                                        Wind
+                            </div>
+                        </div>
+                        <div class="card events-card mb-2">
+                            <header class="card-header has-background-dark">
+                                <p class="card-header-title is-centered is-uppercase has-text-white">
+                                    Wind Speed Stats
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns is-flex">
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
+                                        </div>
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </td>
-                            <td class="is-vcentered">
-                                ${reading.windSpeed} km/hr or ${reading.beaufort()} bft <br>
-                                ${reading.beaufort("label")}<br>
-                                Feels Like: ${reading.windChill()}&#176C<br>
-                                Direction: ${reading.windCompassDirection()} ${reading.windDirection}&#176
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="has-background-grey has-text-white is-vcentered">
-                                <!-- Pressure -->
-                                <div class="columns is-vcentered">
-                                    <div class="column is-3">
-                                        <figure class="image">
-                                            <img src="/public/images/weathericons/barometer.svg" alt="pressure">
-                                        </figure>
-                                    </div>
-                                    <div class="column is-vcentered is-uppercase has-text-weight-bold">
-                                        Pressure
+                            </div>
+                        </div>
+                        <div class="card events-card mb-2">
+                            <header class="card-header has-background-dark">
+                                <p class="card-header-title is-centered is-uppercase has-text-white">
+                                    Pressure Stats
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns is-flex">
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
+                                        </div>
+                                        <div class="column is-half has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                800
+                                            </div>
+                                            <div class="is-size-6 has-text-weight-bold is-uppercase">Max</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </td>
-                            <td class="is-vcentered">
-                                ${reading.pressure} hPa
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- READINGS & STATS END -->
+
             </div>
         </div>
     </div>
