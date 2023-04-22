@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import play.db.jpa.Model;
 import utilities.Conversions;
 
+
 @Entity
 public class Reading extends Model {
   public int code;

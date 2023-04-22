@@ -24,6 +24,8 @@
         </section>
         <!-- Hero Welcome User End-->
         <!-- Station -->
+        #{addreading station:station /}
+
         <div class="column is-12 mt-3 p-0">
             <div class="card events-card ">
                 <header class="card-header has-background-info mb-2">
@@ -33,7 +35,7 @@
                     </p>
                 </header>
                 #{latestreadings station:station /}
-                #{addreading station:station /}
+
                 <div class="columns is-centered px-5">
                     #{if station.readings.size() > 0}
                         <div class="column is-centered mt-0">
