@@ -7,15 +7,16 @@
     </header>
     <section class="columns is-centered">
       <div class="column is-12 pb-0">
-        <form name="addSong" action="/station/${_station.id}/addreading" onsubmit="return validateSongForm()"
+        <form name="addReading" action="/station/${_station.id}/addreading" onsubmit="return validateReadingForm()"
               method="POST">
           <div class="field is-horizontal mx-4 my-0">
             <div class="field-body is-centered">
               <div class="field">
                 <label class="label mb-0">Code</label>
                 <div class="control">
-                  <div class="select is-fullwidth">
+                  <div id="selectCode" class="select is-fullwidth">
                     <select name="code">
+                      <option value=""></option>
                       <option value="100">100 - Clear</option>
                       <option value="200">200 - Partial Clouds</option>
                       <option value="300">300 - Cloudy</option>
@@ -26,20 +27,21 @@
                       <option value="800">800 - Thunder</option>
                     </select>
                   </div>
+                  <div id="errCode" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
                 <label class="label mb-0">Temperature</label>
                 <div class="control">
                   <input id="newTemperature" type="text" class="input" placeholder="000.00&#176C" name="temperature">
-                  <div id="errTemperature" class="showError"></div>
+                  <div id="errTemperature" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
                 <label class="label mb-0">Wind Speed</label>
                 <div class="control">
                   <input id="newWindSpeed" type="text" class="input" placeholder="000.00 km/hr" name="windSpeed">
-                  <div id="errWindSpeed" class="showError"></div>
+                  <div id="errWindSpeed" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
@@ -47,7 +49,7 @@
                 <div class="control">
                   <input id="newWindDirection" type="text" class="input" placeholder="000.00&#176"
                          name="windDirection" min="0" type="number">
-                  <div id="errWindDirection" class="showError"></div>
+                  <div id="errWindDirection" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
@@ -55,7 +57,7 @@
                 <div class="control">
                   <input id="newPressure" type="text" class="input" placeholder="0000 hPa" name="pressure" min="0"
                          type="number">
-                  <div id="errPressure" class="showError"></div>
+                  <div id="errPressure" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
             </div>
