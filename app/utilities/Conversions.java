@@ -59,41 +59,23 @@ public class Conversions {
 
     return response;
   }
-
   public static double convertToFahrenheit(double temperature) {
     double fahrenheit = temperature * 9 / 5 + 32;
     return fahrenheit;
   }
-
   public static String convertWeatherCode(int code) {
-    String weatherCode = "";
+    HashMap<Integer, String> weatherCodeMap = new HashMap<Integer, String>();
 
-    switch (code) {
-      case 100:
-        weatherCode = "Clear";
-        break;
-      case 200:
-        weatherCode = "Partial clouds";
-        break;
-      case 300:
-        weatherCode = "Cloudy";
-        break;
-      case 400:
-        weatherCode = "Light Showers";
-        break;
-      case 500:
-        weatherCode = "Heavy Showers";
-        break;
-      case 600:
-        weatherCode = "Rain";
-        break;
-      case 700:
-        weatherCode = "Snow";
-        break;
-      case 800:
-        weatherCode = "Thunder";
-        break;
-    }
+    weatherCodeMap.put(100, "Clear");
+    weatherCodeMap.put(200, "Partial Clouds");
+    weatherCodeMap.put(300, "Cloudy");
+    weatherCodeMap.put(400, "Light Showers");
+    weatherCodeMap.put(500, "Heavy Showers");
+    weatherCodeMap.put(600, "Rain");
+    weatherCodeMap.put(700, "Snow");
+    weatherCodeMap.put(800, "Thunder");
+
+    String weatherCode = weatherCodeMap.get(code);
 
     return weatherCode;
   }
