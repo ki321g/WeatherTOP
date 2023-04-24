@@ -1,56 +1,64 @@
 package utilities;
 
+import java.util.HashMap;
+
 public class Conversions {
   public static String convertToBeaufort(double windSpeed, String returnType) {
     int bf = 0;
-    String bfLabel = "";
 
     if (windSpeed == 1) {
       bf = 0;
-      bfLabel = "Calm";
     } else if (windSpeed >= 2 && windSpeed <= 5) {
       bf = 1;
-      bfLabel = "Light Air";
     } else if (windSpeed >= 6 && windSpeed <= 11) {
       bf = 2;
-      bfLabel = "Light Breeze";
     } else if (windSpeed >= 12 && windSpeed <= 19) {
       bf = 3;
-      bfLabel = "Gentle Breeze";
     } else if (windSpeed >= 20 && windSpeed <= 28) {
       bf = 4;
-      bfLabel = "Moderate Breeze";
     } else if (windSpeed >= 29 && windSpeed <= 38) {
       bf = 5;
-      bfLabel = "Fresh Breeze";
     } else if (windSpeed >= 39 && windSpeed <= 49) {
       bf = 6;
-      bfLabel = "Strong Breeze";
     } else if (windSpeed >= 50 && windSpeed <= 61) {
       bf = 7;
-      bfLabel = "Near Gale";
     } else if (windSpeed >= 62 && windSpeed <= 74) {
       bf = 8;
-      bfLabel = "Gale";
     } else if (windSpeed >= 75 && windSpeed <= 88) {
       bf = 9;
-      bfLabel = "Severe Gale";
     } else if (windSpeed >= 89 && windSpeed <= 102) {
       bf = 10;
-      bfLabel = "Strong Storm";
     } else if (windSpeed >= 103 && windSpeed <= 117) {
       bf = 11;
-      bfLabel = "Violent Storm";
     }
 
     if (returnType == "label") {
-      return bfLabel;
+      return getBeaufortLabel(bf);
     } else {
       return Integer.toString(bf);
     }
 
   }
+  public static String getBeaufortLabel(int beaufort ) {
+    HashMap<Integer, String> beaufortLabel = new HashMap<Integer, String>();
 
+    beaufortLabel.put(0, "Calm");
+    beaufortLabel.put(1, "Light Air");
+    beaufortLabel.put(2, "Light Breeze");
+    beaufortLabel.put(3, "Gentle Breeze");
+    beaufortLabel.put(4, "Moderate Breeze");
+    beaufortLabel.put(5, "Fresh Breeze");
+    beaufortLabel.put(6, "Strong Breeze");
+    beaufortLabel.put(7, "Near Gale");
+    beaufortLabel.put(8, "Gale");
+    beaufortLabel.put(9, "Severe Gale");
+    beaufortLabel.put(10, "Strong Storm");
+    beaufortLabel.put(11, "Violent Storm");
+
+    String response = beaufortLabel.get(beaufort);
+
+    return response;
+  }
 
   public static double convertToFahrenheit(double temperature) {
     double fahrenheit = temperature * 9 / 5 + 32;
