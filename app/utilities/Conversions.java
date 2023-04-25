@@ -55,9 +55,9 @@ public class Conversions {
     beaufortLabel.put(10, "Strong Storm");
     beaufortLabel.put(11, "Violent Storm");
 
-    String response = beaufortLabel.get(beaufort);
+    String latestBeaufortLabel = beaufortLabel.get(beaufort);
 
-    return response;
+    return latestBeaufortLabel;
   }
   public static double convertToFahrenheit(double temperature) {
     double fahrenheit = temperature * 9 / 5 + 32;
