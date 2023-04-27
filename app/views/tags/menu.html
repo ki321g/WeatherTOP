@@ -18,17 +18,33 @@
 
         <!-- NavBar Items -->
         <div class="navbar-menu has-background-info" id="nav-links">
-            <!-- NavBar End -->
-            <div class="navbar-end is-uppercase mr-4">
-                <a id="dashboard" class="navbar-item has-text-white has-text-weight-bold is-size-5 main-navbar"
-                   href="/dashboard">
-                    Dashboard
+            <!-- NavBar Start -->
+            <div class="navbar-start is-uppercase mr-4">
+                <a id="home" class="navbar-item has-text-white has-text-weight-bold is-size-5 main-navbar"
+                   href="/">
+                    Home
                 </a>
                 <a id="about" class="navbar-item has-text-white has-text-weight-bold is-size-5 main-navbar"
                    href="/about">
                     About
                 </a>
             </div>
+            <!-- NavBar Start End -->
+            <!-- NavBar End -->
+            <!-- Login/Signup Buttons -->
+            <div class="navbar-end  mr-4">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="/signup" class="button is-danger">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a href="/login" class="button is-light">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Login/Signup Buttons End -->
             <!-- NavBar End End -->
         </div>
         <!-- NavBar Items End -->
@@ -36,3 +52,7 @@
     <!-- NavBar Container End-->
 </nav>
 <!-- NAVBAR End-->
+
+<script>
+    $("#${_id}").addClass("has-background-info-dark has-text-grey-lighter");
+</script>

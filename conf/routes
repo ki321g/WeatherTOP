@@ -6,6 +6,13 @@
 GET     /                                       Start.index
 GET     /about                                  About.index
 
+# Accounts
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout
+
 # Station control
 GET     /dashboard                              Dashboard.index
 POST    /dashboard/addstation                   StationCtrl.addStation

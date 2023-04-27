@@ -17,6 +17,7 @@ public class Station extends Model {
   public String name;
   public double latitude;
   public double longitude;
+
   @OneToMany(cascade = CascadeType.ALL)
   public List<Reading> readings = new ArrayList<Reading>();
 

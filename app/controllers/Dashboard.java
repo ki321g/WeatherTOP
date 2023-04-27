@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Member;
 import models.Station;
 import models.Reading;
 import play.Logger;
@@ -17,13 +18,13 @@ public class Dashboard extends Controller {
   public static void index() {
     Logger.info("Rendering Dashboard");
     Logger.info("Current Local Date Time: "+ LocalDateTime.now());
-  /*  List<Station> stations = Station.findAll();*/
-    List<Station> stations = Station.sortStations(Station.findAll());
-
+    Member member = Accounts.getLoggedInMember();
+    //List<Station> stations = Station.sortStations(Station.findAll());
+  //  List<Station> stations = Station.sortStations(Station.findAll());
+    List<Station> stations = member.stations;
     for (Station station : stations) {
       Calculations.calculateConditions(station);
     }
-
     render("dashboard.html", stations);
   }
 
