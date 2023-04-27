@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b184e669-1b07-4428-b60f-ef5cd3ac2263" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utilities/Conversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utilities/Conversions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/addstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addstation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/latestreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/latestreadings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <workItem from="1682167860397" duration="17806000" />
       <workItem from="1682319559099" duration="5000" />
       <workItem from="1682319595462" duration="18000" />
-      <workItem from="1682359307088" duration="4220000" />
+      <workItem from="1682359307088" duration="12998000" />
     </task>
     <servers />
   </component>

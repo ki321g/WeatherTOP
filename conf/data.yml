@@ -1,5 +1,6 @@
 Reading(r1):
   code: 800
+  dateTime: 20/04/2023 12:12:12
   temperature: 0.5
   windSpeed: 3.5
   windDirection: 220
@@ -7,6 +8,7 @@ Reading(r1):
 
 Reading(r2):
   code: 600
+  dateTime: 16/04/2023 09:09:09
   temperature: 6.0
   windSpeed: 2
   windDirection: 200
@@ -14,6 +16,7 @@ Reading(r2):
 
 Reading(r3):
   code: 700
+  dateTime: 17/04/2023 10:10:10
   temperature: 8.0
   windSpeed: 1
   windDirection: 90
@@ -21,6 +24,7 @@ Reading(r3):
 
 Reading(r4):
   code: 200
+  dateTime: 19/04/2023 11:11:11
   temperature: 0.5
   windSpeed: 3.5
   windDirection: 120
