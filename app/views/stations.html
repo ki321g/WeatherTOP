@@ -1,7 +1,12 @@
 #{extends 'main.html' /}
-#{set title:'Station' /}
+#{set title:'Stations' /}
 
-#{membersmenu id:"dashboard"/}
+#{if session.get("logged_in_Memberid") != null }
+#{membersmenu id:"stations"/}
+#{/if}
+#{else}
+#{menu id:"stations"/}
+#{/else}
 
 <!-- Content Start -->
 <section class="section py-3">
@@ -12,43 +17,38 @@
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title is-uppercase  is-size-3">
-                        <span class="has-text-white has-text-weight-bold">Weather</span><span
+                        <span class="has-text-white has-text-weight-bold">All Weather</span><span
                             class="has-text-warning">Top</span>
-                        <span class="has-text-white has-text-weight-bold">${station.name} Station</span>
+                        <span class="has-text-white has-text-weight-bold">Stations</span>
                     </h1>
                     <h2 class="subtitle">
-                        Below is a list of all your stats and readings
+                        Below is a list of all current Stations and there latest Readings
                     </h2>
                 </div>
             </div>
         </section>
         <!-- Hero Welcome User End-->
         <!-- Station -->
-        #{addreading station:station /}
-        #{if station.readings.size() > 0}
         <div class="column is-12 mt-3 p-0">
             <div class="card events-card ">
                 <header class="card-header has-background-info mb-2">
                     <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
-                        <!--${station.name}-->
                     <div class="empty-div"></div>
                     </p>
                 </header>
-                #{latestreadings station:station /}
-
-                <div class="columns is-centered px-5">
-                    <div class="column is-centered mt-0">
-                        <div class="table-container">
-                            #{listreadings station:station/}
-                        </div>
+                <div class="columns is-multiline px-2">
+                    #{list items:stations, as:'station'}
+                    <div class="column is-4 is-full-tablet">
+                        #{weatherwidget station:station/}
                     </div>
+                    #{/list}
                 </div>
                 <footer class="card-footer has-background-grey mt-4">
                     <div class="empty-div is-size-4 py-2"></div>
                 </footer>
             </div>
         </div>
-        #{/if}
+
         <!-- Station End -->
     </div>
 </section>
