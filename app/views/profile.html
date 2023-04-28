@@ -3,7 +3,6 @@
 
 #{membersmenu id:"profile"/}
 
-
 <!-- Profile Start -->
 <!-- Content Start -->
 <section class="section py-3">
@@ -42,18 +41,20 @@
             #{profileupdate updateSuccess:updateSuccess /}
             #{/if}
             <!-- Login Notification End -->
-            <form class="p-2" action="/update" method="POST">
+            <form name="frmRegister" class="p-2" action="/update" method="POST" onsubmit="return validateRegisterForm()">
               <div class="field is-horizontal field-body">
                 <div class="field">
                   <label class="label">First Name</label>
                   <p class="control is-expanded">
                     <input class="input" type="text" placeholder="First Name" name="firstname" value="${member.firstname}">
+                  <div id="errFirstName" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                   </p>
                 </div>
                 <div class="field">
                   <label class="label">Last Name</label>
                   <p class="control">
                     <input class="input" type="text" placeholder="Last Name" name="lastname" value="${member.lastname}">
+                  <div id="errLastName" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                   </p>
                 </div>
               </div>
@@ -61,15 +62,24 @@
                 <label class="label">Email Address</label>
                 <div class="control">
                   <input class="input" type="text" placeholder="Email" name="email" value="${member.email}" disabled>
+                  <div id="errEmail" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
                 <label class="label">Password</label>
                 <div class="control">
-                  <input class="input" type="password" placeholder="Password" name="password" value="${member.password}">
+                  <input class="input" type="password" placeholder="Password" id="password"  name="password" value="${member.password}" onkeyup="check();">
+                  <div id="errPassword" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
+                <label class="label">Confirm Password</label>
+                <div class="control">
+                  <input class="input" type="password" placeholder="Password" id="confirm_password" name="confirm_password" value="${member.password}" onkeyup="check();">
+                  <div id="errConfirmPassword" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                </div>
+              </div>
+     <!--         <div class="field">
                 <div class="control">
                   <a class="is-pulled-right"><small>
                     Forgot password?
@@ -80,6 +90,7 @@
                   </label>
                 </div>
               </div>
+     -->
               <div class="field is-grouped">
                 <div class="control is-expanded">
                   <button class="button is-info is-fullwidth">Update</button>
@@ -95,3 +106,25 @@
 </section>
 <!-- Content End -->
 <!-- Profile End -->
+
+<Script>
+  //https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page
+  /*
+  var check = function() {
+
+    if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+      document.forms["updateUser"]["password"].classList.add('is-success');
+      document.forms["updateUser"]["password"].classList.remove('is-danger');
+      document.forms["updateUser"]["confirm_password"].classList.add('is-success');
+      document.forms["updateUser"]["confirm_password"].classList.remove('is-danger');
+      document.getElementById("errPassword").style.display = 'none';
+    } else {
+      document.forms["updateUser"]["password"].classList.add('is-danger');
+      document.forms["updateUser"]["confirm_password"].classList.add('is-danger');
+      document.getElementById("errPassword").style.display = 'block';
+      document.getElementById("errPassword").innerHTML = "Password & Confirm Password Not Matching";
+    }
+  }
+  */
+   */
+</Script>

@@ -122,61 +122,84 @@ function validateStationForm() {
 	return valid;
 }
 
+// Validates RegisterForm
+function validateRegisterForm() {
+	var valid = true;
+	var checkFirstName = document.forms["frmRegister"]["firstname"].value;
+	var checkLastName = document.forms["frmRegister"]["lastname"].value;
+	var checkEmail = document.forms["frmRegister"]["email"].value;
+	var checkPassword = document.forms["frmRegister"]["password"].value;
+	var checkConfirmPassword = document.forms["frmRegister"]["confirm_password"].value;
 
-/*
-deleteStation.addEventListener('click', () => {
-	// Functions to open and close a modal
-	function openModal($el) {
-		$el.classList.add('is-active');
+	if (checkFirstName == "") {
+		document.forms["frmRegister"]["firstname"].classList.add('is-danger');
+		document.getElementById("errFirstName").style.display = 'block';
+		document.getElementById("errFirstName").innerHTML = "Enter Your First Name";
+		valid = false;
+	} else {
+		document.forms["frmRegister"]["firstname"].classList.add('is-success');
+		document.forms["frmRegister"]["firstname"].classList.remove('is-danger');
+		document.getElementById("errFirstName").style.display = "none";
 	}
 
-	function closeModal($el) {
-		$el.classList.remove('is-active');
+	if (checkLastName == "") {
+		document.forms["frmRegister"]["lastname"].classList.add('is-danger');
+		document.getElementById("errLastName").style.display = "block";
+		document.getElementById("errLastName").innerHTML = "Enter Your Last Name";
+		valid = false;
+	} else {
+		document.forms["frmRegister"]["lastname"].classList.add('is-success');
+		document.forms["frmRegister"]["lastname"].classList.remove('is-danger');
+		document.getElementById("errLastName").style.display = "none";
 	}
 
-	function closeAllModals() {
-		(document.querySelectorAll('.modal') || []).forEach(($modal) => {
-			closeModal($modal);
-		});
+	if (checkPassword == "") {
+		document.forms["frmRegister"]["password"].classList.add('is-danger');
+		document.getElementById("errPassword").style.display = "block";
+		document.getElementById("errPassword").innerHTML = "Enter A Password";
+		valid = false;
+	} else {
+		document.forms["frmRegister"]["password"].classList.add('is-success');
+		document.forms["frmRegister"]["password"].classList.remove('is-danger');
+		document.getElementById("errPassword").style.display = "none";
 	}
 
-	// Add a click event on buttons to open a specific modal
-	(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-		const modal = $trigger.dataset.target;
-		const $target = document.getElementById(modal);
-
-		$trigger.addEventListener('click', () => {
-			openModal($target);
-		});
-	});
-	// Add a click event on various child elements to close the parent modal
-	(
-		document.querySelectorAll(
-			'.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .delete-station'
-		) || []
-	).forEach(($close) => {
-		const $target = $close.closest('.modal');
-
-		$close.addEventListener('click', () => {
-			closeModal($target);
-		});
-	});
-
-	// Add a keyboard event to close all modals
-	document.addEventListener('keydown', (event) => {
-		const e = event || window.event;
-
-		if (e.keyCode === 27) {
-			// Escape key
-			closeAllModals();
+	if (checkConfirmPassword == "") {
+		document.forms["frmRegister"]["confirm_password"].classList.add('is-danger');
+		document.getElementById("errConfirmPassword").style.display = "block";
+		document.getElementById("errConfirmPassword").innerHTML = "Confirm Your Password";
+		valid = false;
+	} else {
+		if(checkPassword == checkConfirmPassword) {
+			document.forms["frmRegister"]["confirm_password"].classList.add('is-success');
+			document.forms["frmRegister"]["confirm_password"].classList.remove('is-danger');
+			document.getElementById("errConfirmPassword").style.display = "none";
+		} else {
+			document.forms["frmRegister"]["confirm_password"].classList.add('is-danger');
+			document.getElementById("errConfirmPassword").style.display = "block";
+			document.getElementById("errConfirmPassword").innerHTML = "Password & Confirm Password Do Not Match.";
+			valid = false;
 		}
-	});
-});
-deleteReading.addEventListener('click', () => {
-	const modalDisplay = document.querySelector('#modal-delete-reading')
-	modalDisplay.classList.toggle('is-active');
-});
-*/
+	}
 
+	if (checkEmail == "") {
+		document.forms["frmRegister"]["email"].classList.add('is-danger');
+		document.getElementById("errEmail").style.display = "block";
+		document.getElementById("errEmail").innerHTML = "Enter A Valid Email";
+		valid = false;
+	} else {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-
+		if(checkEmail.match(mailformat)) {
+			document.forms["frmRegister"]["email"].classList.add('is-success');
+			document.forms["frmRegister"]["email"].classList.remove('is-danger');
+			document.getElementById("errEmail").style.display = "none";
+		} else {
+			document.forms["frmRegister"]["email"].classList.add('is-danger');
+			document.getElementById("errEmail").style.display = "block";
+			document.getElementById("errEmail").innerHTML = "Enter A Valid Email";
+			valid = false;
+		}
+	}
+	return valid;
+}
