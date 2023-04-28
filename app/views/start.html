@@ -1,7 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'WeatherTop APP' /}
 
+#{if session.get("logged_in_Memberid") != null }
+#{membersmenu id:"home"/}
+#{/if}
+#{else}
 #{menu id:"home"/}
+#{/else}
 
 <!-- Content Start -->
 <section class="container hero">

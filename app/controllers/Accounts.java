@@ -76,7 +76,7 @@ public class Accounts extends Controller
     getLoggedInMember().email = email;
     getLoggedInMember().password = password;
     getLoggedInMember().save();
-    String updateSuccess = "Profile Update Successfull!";
+    String updateSuccess = "Profile Updated Successfully!";
     Member member = Accounts.getLoggedInMember();
     render("/profile.html",member, updateSuccess);
   }
