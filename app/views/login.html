@@ -41,6 +41,11 @@
                         </div>
                     </div>
                     <div class="column">
+                        <!-- Login Notification -->
+                        #{if loginFail != null}
+                        #{loginfail loginFail:loginFail /}
+                        #{/if}
+                        <!-- Login Notification End -->
                         <form class="p-2" action="/authenticate" method="POST">
                             <div class="field">
                                 <label class="label">Email Address</label>

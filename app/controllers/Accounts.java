@@ -4,6 +4,8 @@ import models.Member;
 import play.Logger;
 import play.mvc.Controller;
 
+import java.util.HashMap;
+
 public class Accounts extends Controller
 {
   public static void signup()
@@ -16,6 +18,12 @@ public class Accounts extends Controller
   {
     Logger.info("Rendering Login");
     render("login.html");
+  }
+  public static void profile()
+  {
+    Logger.info("Rendering Profile");
+    Member member = Accounts.getLoggedInMember();
+    render("profile.html", member);
   }
 
   public static void register(String firstname, String lastname, String email, String password)
@@ -37,7 +45,8 @@ public class Accounts extends Controller
       redirect ("/dashboard");
     } else {
       Logger.info("Authentication failed");
-      redirect("/login");
+      String loginFail = "Authentication failed, please try again!";
+      render("/login.html", loginFail);
     }
   }
 
@@ -58,5 +67,17 @@ public class Accounts extends Controller
       login();
     }
     return member;
+  }
+
+  public static void update(String firstname, String lastname, String email, String password) {
+    Logger.info("updating user details");
+    getLoggedInMember().firstname = firstname;
+    getLoggedInMember().lastname = lastname;
+    getLoggedInMember().email = email;
+    getLoggedInMember().password = password;
+    getLoggedInMember().save();
+    String updateSuccess = "Profile Update Successfull!";
+    Member member = Accounts.getLoggedInMember();
+    render("/profile.html",member, updateSuccess);
   }
 }

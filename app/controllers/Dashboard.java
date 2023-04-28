@@ -19,9 +19,8 @@ public class Dashboard extends Controller {
     Logger.info("Rendering Dashboard");
     Logger.info("Current Local Date Time: "+ LocalDateTime.now());
     Member member = Accounts.getLoggedInMember();
-    //List<Station> stations = Station.sortStations(Station.findAll());
-  //  List<Station> stations = Station.sortStations(Station.findAll());
-    List<Station> stations = member.stations;
+    List<Station> stations = Station.sortStations(member.stations);
+   // List<Station> stations = member.stations;
     for (Station station : stations) {
       Calculations.calculateConditions(station);
     }

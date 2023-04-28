@@ -18,23 +18,26 @@ public class StationCtrl extends Controller {
 
   public static void addStation(String name, double latitude, double longitude) {
     Logger.info("Adding Station: " + name);
+    Member member = Accounts.getLoggedInMember();
     Station station = new Station(name, latitude, longitude);
-    station.save();
-
+    member.stations.add(station);
+    member.save();
     redirect("/station/" + station.id);
   }
   public static void deletestation(Long id) {
     Station station;
     if (Station.findById(id) != null) {
+      Member member = Accounts.getLoggedInMember();
       station = Station.findById(id);
       Logger.info("Deleting Station " + station.name);
+      member.stations.remove(station);
+      member.save();
       station.delete();
     } else {
       Logger.info("Station id#" + id + " doesnt exist");
     }
     List<Station> stations = Station.findAll();
     redirect("/dashboard");
-
   }
 
   public static void deletereading(Long id, Long readingid) {
@@ -42,7 +45,6 @@ public class StationCtrl extends Controller {
     Reading reading = Reading.findById(readingid);
     if (station.readings.contains(reading)) {
       Logger.info("Removing Reading id# " + reading.id);
-
       station.readings.remove(reading);
       station.save();
       reading.delete();
@@ -54,7 +56,6 @@ public class StationCtrl extends Controller {
 
   public static void addReading(Long id, int code, double temperature, double windSpeed, double windDirection, int pressure) {
     Logger.info("Adding Reading: " + id);
-
     Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure);
     Station station = Station.findById(id);
     station.readings.add(reading);

@@ -9,8 +9,10 @@ GET     /about                                  About.index
 # Accounts
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login
+GET    /profile                                 Accounts.profile
 POST   /register                                Accounts.register
 POST   /authenticate                            Accounts.authenticate
+POST   /update                                  Accounts.update
 GET    /logout                                  Accounts.logout
 
 # Station control

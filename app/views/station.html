@@ -25,7 +25,7 @@
         <!-- Hero Welcome User End-->
         <!-- Station -->
         #{addreading station:station /}
-
+        #{if station.readings.size() > 0}
         <div class="column is-12 mt-3 p-0">
             <div class="card events-card ">
                 <header class="card-header has-background-info mb-2">
@@ -37,19 +37,20 @@
                 #{latestreadings station:station /}
 
                 <div class="columns is-centered px-5">
-                    #{if station.readings.size() > 0}
-                        <div class="column is-centered mt-0">
-                            <div class="table-container">
-                                #{listreadings station:station/}
-                            </div>
+                    <!--HERE-->
+                    <div class="column is-centered mt-0">
+                        <div class="table-container">
+                            #{listreadings station:station/}
                         </div>
-                     #{/if}
+                    </div>
+                    <!--HERE-->
                 </div>
                 <footer class="card-footer has-background-grey mt-4">
                     <div class="empty-div is-size-4 py-2"></div>
                 </footer>
             </div>
         </div>
+        #{/if}
         <!-- Station End -->
     </div>
 </section>

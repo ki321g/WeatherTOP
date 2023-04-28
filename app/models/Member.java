@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Entity
@@ -35,5 +36,17 @@ public class Member extends Model
   public boolean checkPassword(String password)
   {
     return this.password.equals(password);
+  }
+
+  public String getMemberDetails(String returnType, int memberID) {
+    HashMap<String, String> memberDetails = new HashMap<String, String>();
+
+    memberDetails.put("firstname", firstname);
+    memberDetails.put("lastname", lastname);
+    memberDetails.put("email", email);
+
+    String  returnMemberDetail = memberDetails.get(returnType);
+
+    return returnMemberDetail;
   }
 }
