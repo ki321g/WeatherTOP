@@ -51,7 +51,7 @@
                  style="max-height: 180px;" class="">
         </div>
         <div class="column is-one-third is-size-6-mobile is-size-5 has-text-weight-bold has-text-centered ">
-            <p>${reading.weatherCode(reading.code)}</p>
+            <p>${reading.weatherCode(reading.getCode())}</p>
 
         </div>
         <div class="column is-one-third is-size-6-mobile is-size-5 has-text-weight-bold has-text-centered ">
@@ -67,7 +67,7 @@
         </div>
         <div class="column is-half has-text-centered has-text-weight-bold">
             <div class="is-size-2 is-flex is-vcentered is-justify-content-center">
-                ${reading.temperature}<!--&#176C-->
+                ${reading.getTemperature() }<!--&#176C-->
                 <img class="celsius" src="/public/images/weathericons/thermometer-celsius.svg"
                      style="max-height: 60px;">
             </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="column is-half has-text-centered has-text-weight-bold">
             <div class="is-size-2 is-flex is-vcentered is-justify-content-center">
-                ${reading.pressure}
+                ${reading.getPressure()}
             </div>
             <div class="">hPa</div>
         </div>

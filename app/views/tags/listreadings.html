@@ -2,6 +2,7 @@
     <table class="table is-fullwidth is-bordered is-hoverable is-striped is-narrow ">
         <thead>
         <tr class="is-selected has-background-black is-uppercase is-size-6">
+            <th class="has-text-centered">Date</th>
             <th class="has-text-centered">Code</th>
             <th class="has-text-centered">Temp</th>
             <th class="has-text-centered">Wind Speed</th>
@@ -13,12 +14,13 @@
         <tbody>
         #{list items:_station.readings, as:'reading'}
         <tr>
-            <td>${reading.code}</td>
-            <td>${reading.temperature}&#176C</td>
-            <td>${reading.windSpeed}km/hr</td>
-            <td>${reading.windDirection}&#176</td>
-            <td>${reading.pressure}hPa</td>
-            <td>
+            <td class="has-text-centered">${reading.getDateTime()}</td>
+            <td class="has-text-centered">${reading.getCode()}</td>
+            <td class="has-text-centered">${reading.getTemperature()}&#176C</td>
+            <td class="has-text-centered">${reading.getWindSpeed()}km/hr</td>
+            <td class="has-text-centered">${reading.getWindDirection()}&#176</td>
+            <td class="has-text-centered">${reading.getPressure()}hPa</td>
+            <td class="has-text-centered">
             <!--    <a  class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
                     data-target="modal-delete-reading" aria-label="more options"> -->
                     <a href="/station/${_station.id}/deletereading/${reading.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"

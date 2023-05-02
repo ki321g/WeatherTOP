@@ -12,7 +12,7 @@ public class Analytics {
       minTemperature = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.temperature < minTemperature.temperature) {
+        if (reading.getTemperature() < minTemperature.getTemperature()) {
           minTemperature = reading;
         }
       }
@@ -28,7 +28,7 @@ public class Analytics {
       maxTemperature = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.temperature > maxTemperature.temperature) {
+        if (reading.getTemperature() > maxTemperature.getTemperature()) {
           maxTemperature = reading;
         }
       }
@@ -44,7 +44,7 @@ public class Analytics {
       minWindSpeed = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.windSpeed < minWindSpeed.windSpeed) {
+        if (reading.getWindSpeed() < minWindSpeed.getWindSpeed()) {
           minWindSpeed = reading;
         }
       }
@@ -60,7 +60,7 @@ public class Analytics {
       maxWindSpeed = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.windSpeed > maxWindSpeed.windSpeed) {
+        if (reading.getWindSpeed() > maxWindSpeed.getWindSpeed()) {
           maxWindSpeed = reading;
         }
       }
@@ -76,7 +76,7 @@ public class Analytics {
       minPressure = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.pressure < minPressure.pressure) {
+        if (reading.getPressure() < minPressure.getPressure()) {
           minPressure = reading;
         }
       }
@@ -92,7 +92,7 @@ public class Analytics {
       maxPressure = readings.get(0);
 
       for (Reading reading : readings) {
-        if (reading.pressure > maxPressure.pressure) {
+        if (reading.getPressure() > maxPressure.getPressure()) {
           maxPressure = reading;
         }
       }

@@ -49,19 +49,23 @@ public class Reading extends Model {
   }
 
   /**** Getters ****/
+  public String getDateTime() {
+    return dateTime;
+  }
   public int getCode() {
     return code;
   }
 
-  public double getTemperature() {
-    return temperature;
-  }
+  public double getTemperature() { return temperature;}
 
   public double getWindSpeed() {
     return windSpeed;
   }
+  public double getWindDirection() {
+    return windDirection;
+  }
 
   public int getPressure() {
-    return pressure;
+    return this.pressure;
   }
 }

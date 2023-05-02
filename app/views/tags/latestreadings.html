@@ -34,8 +34,8 @@
                                                         style="width: 25%;">Code
                                                 </td>
                                                 <td class="is-vcentered" style="width: 60%;">
-                                                    ${reading.code} <br>
-                                                    ${reading.weatherCode(reading.code)}
+                                                    ${reading.getCode()} <br>
+                                                    ${reading.weatherCode(reading.getCode())}
                                                 </td>
                                             </tr>
                                             <tr>
@@ -50,7 +50,7 @@
                                                         style="width: 30%;">Temperature
                                                 </td>
                                                 <td class="is-vcentered" style="width: 60%;">
-                                                    ${reading.temperature} &#176C <br>
+                                                    ${reading.getTemperature()} &#176C <br>
                                                     ${reading.fahrenheit()} &#176F
                                                 </td>
                                             </tr>
@@ -66,11 +66,11 @@
                                                         style="width: 30%;">Wind
                                                 </td>
                                                 <td class="is-vcentered" style="width: 60%;">
-                                                    ${reading.windSpeed} km/hr or ${reading.beaufort()} bft <br>
+                                                    ${reading.getWindSpeed()} km/hr or ${reading.beaufort()} bft <br>
                                                     ${reading.beaufort("label")}<br>
                                                     Feels Like: ${reading.windChill()}&#176C<br>
                                                     Direction: ${reading.windCompassDirection()}
-                                                    ${reading.windDirection}&#176
+                                                    ${reading.getWindDirection()}&#176
                                                 </td>
                                             </tr>
                                             <tr>
@@ -84,7 +84,7 @@
                                                         style="width: 30%;">Pressure
                                                 </td>
                                                 <td class="is-vcentered" style="width: 60%;">
-                                                    ${reading.pressure} hPa
+                                                    ${reading.getPressure()} hPa
                                                 </td>
                                             </tr>
                                             </tbody>
