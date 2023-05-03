@@ -40,14 +40,14 @@
               <div class="field">
                 <label class="label mb-0">Wind Speed</label>
                 <div class="control">
-                  <input id="newWindSpeed" type="text" class="input" placeholder="000.00 km/hr" name="windSpeed">
+                  <input id="newWindSpeed" type="number" class="input" placeholder="000.00 km/hr" name="windSpeed" min="0" max="117">
                   <div id="errWindSpeed" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>
               <div class="field">
                 <label class="label mb-0">Wind Direction</label>
                 <div class="control">
-                  <input id="newWindDirection" type="text" class="input" placeholder="000.00&#176" name="windDirection" min="0">
+                  <input id="newWindDirection" type="number" class="input" placeholder="000.00&#176" name="windDirection" min="0" max="360">
                   <div id="errWindDirection" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                 </div>
               </div>

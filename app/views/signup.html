@@ -40,6 +40,11 @@
                         </div>
                     </div>
                     <div class="column">
+                        <!-- Signup Notification -->
+                        #{if signupFail != null}
+                        #{signupfail signupFail:signupFail /}
+                        #{/if}
+                        <!-- Signup Notification End -->
                         <form name="frmRegister" class="p-2" action="/register" method="POST" onsubmit="return validateRegisterForm()">
                             <div class="field is-horizontal field-body">
                                 <div class="field">

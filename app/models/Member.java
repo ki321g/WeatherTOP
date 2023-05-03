@@ -28,10 +28,7 @@ public class Member extends Model
     this.password = password;
   }
 
-  public static Member findByEmail(String email)
-  {
-    return find("email", email).first();
-  }
+  public static Member findByEmail(String email) {return find("email", email.toLowerCase()).first();}
 
   public boolean checkPassword(String password)
   {
