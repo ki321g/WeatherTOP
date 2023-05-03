@@ -13,6 +13,9 @@ public class Calculations {
       station.maxWindSpeed = Analytics.maxWindSpeed(station.readings).getWindSpeed();
       station.minPressure = Analytics.minPressure(station.readings).getPressure();
       station.maxPressure = Analytics.maxPressure(station.readings).getPressure();
+      station.temperatureTrend = Analytics.temperatureTrend(station.readings);
+      station.windSpeedTrend = Analytics.windSpeedTrend(station.readings);
+      station.pressureTrend = Analytics.pressureTrend(station.readings);
     }
   }
 }

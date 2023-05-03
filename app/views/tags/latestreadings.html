@@ -96,22 +96,28 @@
                         </div>
                     </div>
                     <div class="column">
-                        <div class="card events-card mb-2">
+                        <div class="card events-card mb-5">
                             <header class="card-header has-background-dark">
                                 <p class="card-header-title is-centered  is-uppercase has-text-white">
-                                    Temperature Stats
+                                    Temperature Stats/Trends
                                 </p>
                             </header>
                             <div class="card-content p-4">
                                 <div class="content">
                                     <div class="columns is-flex">
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.minTemperature}
                                             </div>
                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
                                         </div>
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                <img src="/public/images/weathericons/thermometer-${_station.temperatureTrend}.svg"
+                                                     alt="wind speed" style="max-height: 50px;">
+                                            </div>
+                                        </div>
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.maxTemperature}
                                             </div>
@@ -121,22 +127,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card events-card mb-2">
+                        <div class="card events-card mb-5">
                             <header class="card-header has-background-dark">
                                 <p class="card-header-title is-centered is-uppercase has-text-white">
-                                    Wind Speed Stats
+                                    Wind Speed Stats/Trends
                                 </p>
                             </header>
-                            <div class="card-content">
+                            <div class="card-content p-4">
                                 <div class="content">
                                     <div class="columns is-flex">
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.minWindSpeed}
                                             </div>
                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
                                         </div>
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                <img src="/public/images/weathericons/${_station.windSpeedTrend}.svg"
+                                                     alt="wind speed" style="max-height: 50px;">
+                                            </div>
+                                        </div>
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.maxWindSpeed}
                                             </div>
@@ -146,22 +158,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card events-card mb-2">
+                        <div class="card events-card mb-1">
                             <header class="card-header has-background-dark">
                                 <p class="card-header-title is-centered is-uppercase has-text-white">
-                                    Pressure Stats
+                                    Pressure Stats/Trends
                                 </p>
                             </header>
-                            <div class="card-content">
+                            <div class="card-content p-4">
                                 <div class="content">
                                     <div class="columns is-flex">
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.minPressure}
                                             </div>
                                             <div class="is-size-6 has-text-weight-bold is-uppercase">Min</div>
                                         </div>
-                                        <div class="column is-half has-text-centered py-0">
+                                        <div class="column is-one-third has-text-centered py-0">
+                                            <div class="is-size-4 has-text-weight-bold">
+                                                <img src="/public/images/weathericons/${_station.pressureTrend}.svg"
+                                                     alt="wind speed" style="max-height: 50px;">
+                                            </div>
+                                        </div>
+                                        <div class="column is-one-third has-text-centered py-0">
                                             <div class="is-size-4 has-text-weight-bold">
                                                 ${_station.maxPressure}
                                             </div>

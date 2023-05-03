@@ -1,8 +1,10 @@
 package utilities;
 
 import models.Reading;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class Analytics {
 
   public static Reading minTemperature(List<Reading> readings) {
@@ -99,6 +101,48 @@ public class Analytics {
     }
 
     return maxPressure;
+  }
+
+  public static String temperatureTrend(List<Reading> readings) {
+    if (readings.size() >= 2) {
+      if (readings.get(readings.size() - 1).temperature > readings.get(readings.size() - 2).temperature) {
+        return "higher";
+      } else if (readings.get(readings.size() - 1).temperature < readings.get(readings.size() - 2).temperature) {
+        return "lower";
+      } else {
+        return "no-change";
+      }
+    } else {
+      return "no-change";
+    }
+  }
+
+  public static String windSpeedTrend(List<Reading> readings) {
+    if (readings.size() >= 2) {
+      if (readings.get(readings.size() - 1).windSpeed > readings.get(readings.size() - 2).windSpeed) {
+        return "higher";
+      } else if (readings.get(readings.size() - 1).windSpeed < readings.get(readings.size() - 2).windSpeed) {
+        return "lower";
+      } else {
+        return "no-change";
+      }
+    } else {
+      return "no-change";
+    }
+  }
+
+  public static String pressureTrend(List<Reading> readings) {
+    if (readings.size() >= 2) {
+      if (readings.get(readings.size() - 1).pressure > readings.get(readings.size() - 2).pressure) {
+        return "higher";
+      } else if (readings.get(readings.size() - 1).pressure < readings.get(readings.size() - 2).pressure) {
+        return "lower";
+      } else {
+        return "no-change";
+      }
+    } else {
+      return "no-change";
+    }
   }
 
 
