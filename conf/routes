@@ -6,6 +6,7 @@
 GET     /                                       Start.index
 GET     /about                                  About.index
 GET     /stations                               Stations.index
+GET     /stationsummary                         Stations.summary
 
 # Accounts
 GET    /signup                                  Accounts.signup

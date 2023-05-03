@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set title:'Station Summary' /}
+
+#{membersmenu id:"dashboard"/}
+
+
+<!-- Content Start -->
+<section class="section py-3">
+    <div class="container">
+        <!-- Hero Welcome USer -->
+        <section class="hero is-info welcome is-small">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-uppercase  is-size-3">
+                        <span class="has-text-white has-text-weight-bold">Weather</span><span
+                            class="has-text-warning">Top</span>
+                        <span class="has-text-white has-text-weight-bold">All Station</span>
+                    </h1>
+                    <h2 class="subtitle">
+                        Below is a list of your Stations Summary
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Welcome User End-->
+
+        <div class="container is-12 mt-3 p-0">
+            <div class="card events-card ">
+                <header class="card-header has-background-info mb-2">
+                    <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
+
+                    <div class="empty-div"></div>
+                    </p>
+                </header>
+
+
+                <div class="columns is-multiline px-2">
+                    #{list items:stations, as:'station'}
+                    <div class="column is-4 is-full-tablet">
+                        #{weatherwidget station:station/}
+                    </div>
+                    #{/list}
+                </div>
+
+
+                <footer class="card-footer has-background-grey mt-4">
+                    <div class="empty-div is-size-4 py-2"></div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Content End -->

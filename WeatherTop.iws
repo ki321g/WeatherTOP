@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b184e669-1b07-4428-b60f-ef5cd3ac2263" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/stationsummary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Reading.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Reading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utilities/Analytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utilities/Analytics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utilities/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utilities/Calculations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/latestreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/latestreadings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/listreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/listreadings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/weatherwidget.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/weatherwidget.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Stations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Stations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/station.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/station.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -73,7 +72,7 @@
       <workItem from="1682319559099" duration="5000" />
       <workItem from="1682319595462" duration="18000" />
       <workItem from="1682359307088" duration="45263000" />
-      <workItem from="1683054504840" duration="4650000" />
+      <workItem from="1683054504840" duration="9950000" />
     </task>
     <servers />
   </component>
