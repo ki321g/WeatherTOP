@@ -36,9 +36,11 @@
 
                 <div class="columns is-multiline px-2">
                     #{list items:stations, as:'station'}
-                    <div class="column is-4 is-full-tablet">
-                        #{weatherwidget station:station/}
-                    </div>
+                            #{if station.readings.size() > 0}
+                            <div class="column is-4 is-full-tablet">
+                                #{weatherwidget station:station/}
+                            </div>
+                        #{/if}
                     #{/list}
                 </div>
 
