@@ -120,7 +120,7 @@ public class Analytics {
   }
 
   public static String windSpeedTrend(List<Reading> readings) {
-    if (readings.size() >= 2) {
+    if (readings.size() >= 3) {
       if (readings.get(readings.size() - 1).windSpeed > readings.get(readings.size() - 2).windSpeed
           && readings.get(readings.size() - 2).windSpeed > readings.get(readings.size() - 3).windSpeed) {
         return "higher";
@@ -136,7 +136,7 @@ public class Analytics {
   }
 
   public static String pressureTrend(List<Reading> readings) {
-    if (readings.size() >= 2) {
+    if (readings.size() >= 3) {
       if (readings.get(readings.size() - 1).pressure > readings.get(readings.size() - 2).pressure
           && readings.get(readings.size() - 2).pressure > readings.get(readings.size() - 3).pressure) {
         return "higher";
