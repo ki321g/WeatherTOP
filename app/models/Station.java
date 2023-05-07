@@ -54,10 +54,10 @@ public class Station extends Model {
    * https://www.geeksforgeeks.org/find-first-and-last-element-of-arraylist-in-java/
    * Might not use this
    */
-  public List<Reading> latestReading() {
+  public List<Reading> latestReading(int readingSize) {
     List<Reading> latestReadings = null;
     if (readings.size() > 0) {
-      latestReadings = readings.subList(readings.size() - 1, readings.size());
+      latestReadings = readings.subList(readings.size() - readingSize, readings.size());
     }
     return latestReadings;
   }
