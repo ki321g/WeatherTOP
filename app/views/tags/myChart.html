@@ -1,0 +1,7 @@
+@(chartData: Html)
+
+  var chartData = @chartData;
+  console.log(chartData);
+
+  // Or in your case...
+  var data = google.visualization.arrayToDataTable(@chartData);

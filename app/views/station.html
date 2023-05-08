@@ -26,7 +26,7 @@
                 <div class="column">
                     <div class="container is-pulled-right buttons mr-5">
                         <a href="/stationsummary" class="button is-light">
-                            All Stations Summary
+                            All Station's Current Weather
                         </a>
                     </div>
                 </div>
@@ -45,7 +45,9 @@
                     </p>
                 </header>
                 #{latestreadings station:station /}
-
+                #{if station.readings.size() >= 3}
+                 #{graphtrends station:station /}
+                #{/if}
                 <div class="columns is-centered px-5">
                     <div class="column is-centered mt-0">
                         <div class="table-container">
