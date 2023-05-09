@@ -61,7 +61,7 @@ public class Conversions {
   }
   public static double convertToFahrenheit(double temperature) {
     double fahrenheit = temperature * 9 / 5 + 32;
-    return fahrenheit;
+    return roundCalculation(fahrenheit,2);
   }
   public static String convertWeatherCode(int code) {
     HashMap<Integer, String> weatherCodeMap = new HashMap<Integer, String>();
