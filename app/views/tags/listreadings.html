@@ -37,6 +37,7 @@
                             </a>
                             <a data-open-modal="" class="card-footer-item js-modal-trigger-edit has-text-white is-size-6 p-0"
                                data-target="modal-edit-reading"
+                               data-code="${reading.getCode()}"
                                aria-label="more options">
                                 <button class="button is-warning is-small mx-1">
                               <span class="icon is-small">
@@ -70,7 +71,7 @@
                                     <label class="label mb-0">Code</label>
                                     <div class="control">
                                         <div id="selectCode" class="select is-fullwidth">
-                                          <select name="code" value="400">
+                                          <select id="code" name="code">
                                                 <option value=""></option>
                                                 <option value="100">100 - Clear</option>
                                                 <option value="200">200 - Partial Clouds</option>
@@ -180,10 +181,11 @@
         (document.querySelectorAll('.js-modal-trigger-edit') || []).forEach(($trigger) => {
             const modal = $trigger.dataset.target;
             const $target = document.getElementById(modal);
-
+            const code = $trigger.dataset.code;
 
             $trigger.addEventListener('click', () => {
-               openModal($target);
+                document.getElementById('code').value=code;
+                openModal($target);
             });
         });
 
