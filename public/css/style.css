@@ -62,3 +62,21 @@ th {
 	margin-left: -14px !important;
 	margin-top: -10px !important;
 }
+
+.temperatureChart:hover,
+.windSpeedChart:hover,
+.pressureChart:hover
+{
+	property-name: hsl(48, 100%, 67%);
+}
+
+:root {
+	--ratio: 2;
+}
+
+dialog {
+
+	border: 3px solid hsl(0, 0%, 48%);
+	border-radius: calc(5px * var(--ratio));
+	padding: 0px !important;
+}

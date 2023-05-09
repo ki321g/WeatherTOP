@@ -8,7 +8,6 @@ burgerIcon.addEventListener('click', () => {
     navbarMenu.classList.toggle('is-active');
 });
 
-
 // Validates addReading Form
 function validateReadingForm() {
     var valid = true;
