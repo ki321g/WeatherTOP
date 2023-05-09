@@ -21,14 +21,9 @@
             <td class="has-text-centered">${reading.getWindDirection()}&#176</td>
             <td class="has-text-centered">${reading.getPressure()}hPa</td>
             <td class="has-text-centered">
-            <!--    <a  class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
-                    data-target="modal-delete-reading" aria-label="more options"> -->
 
-                  <!--  <div id="delete-reading" class="buttons has-addons is-centered"> -->
                     <div class="buttons has-addons is-centered">
                         <p class="control is-flex is-centered">
-                       <!--     <a href="/station/${_station.id}/deletereading/${reading.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
-                               data-target="modal-delete-reading" aria-label="more options"> -->
                         <a data-open-modal="" class="card-footer-item js-modal-trigger-delete has-text-white is-size-6 p-0"
                            data-target="modal-delete-reading"
                            data-todelete="Reading"
@@ -75,11 +70,11 @@
                                     <label class="label mb-0">Code</label>
                                     <div class="control">
                                         <div id="selectCode" class="select is-fullwidth">
-                                            <select name="code" value="400">
+                                          <select name="code" value="400">
                                                 <option value=""></option>
                                                 <option value="100">100 - Clear</option>
                                                 <option value="200">200 - Partial Clouds</option>
-                                                <option selected value="300">300 - Cloudy</option>
+                                                <option value="300">300 - Cloudy</option>
                                                 <option value="400">400 - Light Showers</option>
                                                 <option value="500">500 - Heavy Showers</option>
                                                 <option value="600">600 - Rain</option>
@@ -135,7 +130,7 @@
     <div class="modal-card">
         <header class="modal-card-head has-background-info py-0">
             <p class="modal-card-title has-text-weight-semi-bold is-uppercase has-text-white is-size-5 py-4">Delete
-                Station</p>
+                Reading</p>
             <button class="delete is-size-4" aria-label="close"></button>
         </header>
         <section class="modal-card-body p-4">
