@@ -38,6 +38,10 @@
                             <a data-open-modal="" class="card-footer-item js-modal-trigger-edit has-text-white is-size-6 p-0"
                                data-target="modal-edit-reading"
                                data-code="${reading.getCode()}"
+                               data-temperature="${reading.getTemperature()}"
+                               data-windspeed="${reading.getWindSpeed()}"
+                               data-winddirection="${reading.getWindDirection()}"
+                               data-pressure="${reading.getPressure()}"
                                aria-label="more options">
                                 <button class="button is-warning is-small mx-1">
                               <span class="icon is-small">
@@ -89,28 +93,28 @@
                                 <div class="field">
                                     <label class="label mb-0">Temperature</label>
                                     <div class="control">
-                                        <input id="newTemperature" type="number" step="any" class="input" placeholder="000.00&#176C" name="temperature" value="${reading.getTemperature()}">
+                                        <input id="Temperature" type="number" step="any" class="input" placeholder="000.00&#176C" name="temperature" value="">
                                         <div id="errTemperature" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label class="label mb-0">Wind Speed</label>
                                     <div class="control">
-                                        <input id="newWindSpeed" type="number" step="any" class="input" placeholder="000.00 km/hr" name="windSpeed" min="0" max="117" value="${reading.getWindSpeed()}">
+                                        <input id="WindSpeed" type="number" step="any" class="input" placeholder="000.00 km/hr" name="windSpeed" min="0" max="117" value="">
                                         <div id="errWindSpeed" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label class="label mb-0">Wind Direction</label>
                                     <div class="control">
-                                        <input id="newWindDirection" type="number" step="any" class="input" placeholder="000.00&#176" name="windDirection" min="0" max="360" value="${reading.getWindDirection()}">
+                                        <input id="WindDirection" type="number" step="any" class="input" placeholder="000.00&#176" name="windDirection" min="0" max="360" value="">
                                         <div id="errWindDirection" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label class="label mb-0">Pressure</label>
                                     <div class="control">
-                                        <input id="newPressure" type="number" class="input" placeholder="0000 hPa" name="pressure" min="0" value="${reading.getPressure()}">
+                                        <input id="Pressure" type="number" class="input" placeholder="0000 hPa" name="pressure" min="0" value="">
                                         <div id="errPressure" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
                                     </div>
                                 </div>
@@ -182,9 +186,19 @@
             const modal = $trigger.dataset.target;
             const $target = document.getElementById(modal);
             const code = $trigger.dataset.code;
+            const temperature = $trigger.dataset.temperature;
+            const windspeed = $trigger.dataset.windspeed;
+            const winddirection = $trigger.dataset.winddirection;
+            const pressure = $trigger.dataset.pressure;
+
 
             $trigger.addEventListener('click', () => {
                 document.getElementById('code').value=code;
+                document.getElementById('Temperature').value=temperature;
+                document.getElementById('WindSpeed').value=windspeed;
+                document.getElementById('WindDirection').value=winddirection;
+                document.getElementById('Pressure').value=pressure;
+
                 openModal($target);
             });
         });
