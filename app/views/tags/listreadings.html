@@ -8,7 +8,7 @@
             <th class="has-text-centered">Wind Speed</th>
             <th class="has-text-centered">Wind Direction</th>
             <th class="has-text-centered">Pressure</th>
-            <th class="has-text-centered">Delete Reading</th>
+            <th class="has-text-centered">Delete/Edit Reading</th>
         </tr>
         </thead>
         <tbody>
@@ -23,20 +23,36 @@
             <td class="has-text-centered">
             <!--    <a  class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
                     data-target="modal-delete-reading" aria-label="more options"> -->
-                    <a href="/station/${_station.id}/deletereading/${reading.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
-                        data-target="modal-delete-reading" aria-label="more options">
+
                   <!--  <div id="delete-reading" class="buttons has-addons is-centered"> -->
                     <div class="buttons has-addons is-centered">
-                        <p class="control is-centered">
-                            <button class="button is-danger is-small">
+                        <p class="control is-flex is-centered">
+                       <!--     <a href="/station/${_station.id}/deletereading/${reading.id}" class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
+                               data-target="modal-delete-reading" aria-label="more options"> -->
+                        <a data-open-modal="" class="card-footer-item js-modal-trigger-delete has-text-white is-size-6 p-0"
+                           data-target="modal-delete-reading"
+                           data-todelete="Reading"
+                           data-link="/station/${_station.id}/deletereading/${reading.id}"  aria-label="more options">
+                            <button class="button is-danger is-small mx-1">
                               <span class="icon is-small">
                                 <i class="fas fa-trash"></i>
                               </span>
                                <span>Delete</span>
                             </button>
+                            </a>
+                            <a data-open-modal="" class="card-footer-item js-modal-trigger-edit has-text-white is-size-6 p-0"
+                               data-target="modal-edit-reading"
+                               aria-label="more options">
+                                <button class="button is-warning is-small mx-1">
+                              <span class="icon is-small">
+                                <i class="fas fa-pen-to-square"></i>
+                              </span>
+                                    <span>Edit</span>
+                                </button>
+                            </a>
                         </p>
                     </div>
-                </a>
+
             </td>
         </tr>
         #{/list}
@@ -45,26 +61,154 @@
 </div>
 
 <!-- Modal Start -->
-<div id="modal-delete-reading" class="modal">
-    <div class="modal-background"></div>
+<dialog id="modal-edit-reading" class="modal p-1">
     <div class="modal-card">
         <header class="modal-card-head has-background-info py-0">
-            <p class="modal-card-title has-text-weight-semibold	is-uppercase has-text-white is-size-5 py-4">Delete
-                Reading</p>
+            <p class="modal-card-title has-text-weight-semi-bold is-uppercase has-text-white is-size-5 py-4">Edit Reading</p>
+            <button class="delete is-size-4" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body px-4 py-2">
+            <!-- Content ... -->
+                    <form name="addReading" action="/station/${_station.id}/editreading/${reading.id}" onsubmit="return"
+                          method="POST">
+                                <div class="field">
+                                    <label class="label mb-0">Code</label>
+                                    <div class="control">
+                                        <div id="selectCode" class="select is-fullwidth">
+                                            <select name="code" value="400">
+                                                <option value=""></option>
+                                                <option value="100">100 - Clear</option>
+                                                <option value="200">200 - Partial Clouds</option>
+                                                <option selected value="300">300 - Cloudy</option>
+                                                <option value="400">400 - Light Showers</option>
+                                                <option value="500">500 - Heavy Showers</option>
+                                                <option value="600">600 - Rain</option>
+                                                <option value="700">700 - Snow</option>
+                                                <option value="800">800 - Thunder</option>
+                                            </select>
+                                        </div>
+                                        <div id="errCode" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label mb-0">Temperature</label>
+                                    <div class="control">
+                                        <input id="newTemperature" type="number" step="any" class="input" placeholder="000.00&#176C" name="temperature" value="${reading.getTemperature()}">
+                                        <div id="errTemperature" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label mb-0">Wind Speed</label>
+                                    <div class="control">
+                                        <input id="newWindSpeed" type="number" step="any" class="input" placeholder="000.00 km/hr" name="windSpeed" min="0" max="117" value="${reading.getWindSpeed()}">
+                                        <div id="errWindSpeed" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label mb-0">Wind Direction</label>
+                                    <div class="control">
+                                        <input id="newWindDirection" type="number" step="any" class="input" placeholder="000.00&#176" name="windDirection" min="0" max="360" value="${reading.getWindDirection()}">
+                                        <div id="errWindDirection" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label mb-0">Pressure</label>
+                                    <div class="control">
+                                        <input id="newPressure" type="number" class="input" placeholder="0000 hPa" name="pressure" min="0" value="${reading.getPressure()}">
+                                        <div id="errPressure" class="showError has-background-danger has-text-centered has-text-white mt-1"></div>
+                                    </div>
+                                </div>
+
+                        <div class="column is-12 p-0">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-fullwidth is-info py-0">Edit Reading</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+        </section>
+</dialog>
+<!-- Modal End -->
+<!-- Modal Start -->
+<dialog id="modal-delete-reading" class="modal p-1">
+    <div class="modal-card">
+        <header class="modal-card-head has-background-info py-0">
+            <p class="modal-card-title has-text-weight-semi-bold is-uppercase has-text-white is-size-5 py-4">Delete
+                Station</p>
             <button class="delete is-size-4" aria-label="close"></button>
         </header>
         <section class="modal-card-body p-4">
             <!-- Content ... -->
-            <div class="content">
-                <div class="is-size-4 has-text-weight-semibold has-text-centered pb-0">
-                    Are you sure you want to delete the Reading?
-                </div>
-            </div>
+            <div id="delete-item" class="is-size-4 has-text-weight-semi-bold has-text-centered pb-0"></div>
         </section>
         <footer class="modal-card-foot has-background-grey py-0">
-            <a href="/station/5/deletereading/1" class="card-footer-item delete-reading has-text-white is-size-6 py-2">Delete the Reading</a>
-            <a class="card-footer-item delete-reading has-text-white is-size-6 py-2">Cancel</a>
+            <a id="delete-reading" class="card-footer-item delete-station has-text-white is-size-6 py-2">Delete the Reading</a>
+            <a class="card-footer-item cancel-delete has-text-white is-size-6 py-2">Cancel</a>
         </footer>
     </div>
-</div>
+</dialog>
 <!-- Modal End -->
+<!-- Content End -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                closeModal($modal);
+            });
+        }
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger-delete') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+            const link = $trigger.dataset.link;
+
+
+            $trigger.addEventListener('click', () => {
+                document.getElementById("delete-reading").href = link;
+                document.getElementById("delete-item").innerHTML = "Are your sure you want to delete the Reading?";
+                openModal($target);
+            });
+        });
+
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger-edit') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+
+            $trigger.addEventListener('click', () => {
+               openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button, .cancel-delete') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+                closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            const e = event || window.event;
+
+            if (e.keyCode === 27) { // Escape key
+                closeAllModals();
+            }
+        });
+    });
+
+</script>
