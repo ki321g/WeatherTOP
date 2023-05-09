@@ -2,6 +2,9 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import models.*;
 import utilities.Calculations;
@@ -62,4 +65,21 @@ public class StationCtrl extends Controller {
     station.save();
     redirect("/station/" + id);
   }
+  public static void editReading(Long id, Long readingid, int code, double temperature, double windSpeed, double windDirection, int pressure) {
+    Logger.info("Edit Reading: " + readingid);
+    Reading reading = Reading.findById(readingid);
+
+    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
+
+    reading.dateTime  = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
+    reading.code = code;
+    reading.temperature = temperature;
+    reading.windSpeed = windSpeed;
+    reading.windDirection = windDirection;
+    reading.pressure = pressure;
+    reading.save();
+
+    redirect("/station/" + id);
+  }
+
 }

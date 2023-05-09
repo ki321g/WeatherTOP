@@ -25,6 +25,7 @@ GET     /dashboard/deletestation/{id}           StationCtrl.deleteStation
 
 GET     /station/{id}                               StationCtrl.index
 GET     /station/{id}/deletereading/{readingid}     StationCtrl.deleteReading
+POST    /station/{id}/editreading/{readingid}       StationCtrl.editReading
 POST    /station/{id}/addreading                    StationCtrl.addReading
 
 # Ignore favicon requests

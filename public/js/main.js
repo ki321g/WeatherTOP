@@ -94,6 +94,7 @@ function validateStationForm() {
         document.forms["addStation"]["name"].classList.add('is-success');
         document.forms["addStation"]["name"].classList.remove('is-danger');
         document.getElementById("errName").style.display = "none";
+        valid = true;
     }
 
     if (checkLatitude == "") {
@@ -102,10 +103,11 @@ function validateStationForm() {
         document.getElementById("errLatitude").innerHTML = "Enter Latitude";
         valid = false;
     } else {
-        if (checkLongitude >= -90 && checkLongitude <= 90) {
+        if (checkLatitude >= -90 && checkLatitude <= 90) {
             document.forms["addStation"]["latitude"].classList.add('is-success');
             document.forms["addStation"]["latitude"].classList.remove('is-danger');
             document.getElementById("errLatitude").style.display = "none";
+            valid = true;
         } else {
             document.forms["addStation"]["latitude"].classList.add('is-danger');
             document.getElementById("errLatitude").style.display = "block";
@@ -124,6 +126,7 @@ function validateStationForm() {
             document.forms["addStation"]["longitude"].classList.add('is-success');
             document.forms["addStation"]["longitude"].classList.remove('is-danger');
             document.getElementById("errLongitude").style.display = "none";
+            valid = true;
         } else {
             document.forms["addStation"]["longitude"].classList.add('is-danger');
             document.getElementById("errLongitude").style.display = "block";

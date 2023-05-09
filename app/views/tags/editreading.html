@@ -2,12 +2,12 @@
   <div class="card events-card ">
     <header class="card-header has-background-info mb-2">
       <p class="card-header-title is-uppercase has-text-white is-size-5 py-1">
-        ADD Reading
+        Edit Reading
       </p>
     </header>
     <section class="columns is-centered">
       <div class="column is-12 pb-0">
-        <form name="addReading" action="/station/${_station.id}/addreading" onsubmit="return validateReadingForm()"
+        <form name="addReading" action="/station/${_station.id}/editreading/${reading.id}" onsubmit="return validateReadingForm()"
               method="POST">
           <div class="field is-horizontal mx-4 my-0">
             <div class="field-body is-centered">
@@ -63,7 +63,7 @@
           <div class="column is-12 py-2">
             <div class="field">
               <div class="control">
-                <button class="button is-fullwidth is-info">Add Reading</button>
+                <button class="button is-fullwidth is-info">Edit Reading</button>
               </div>
             </div>
           </div>
