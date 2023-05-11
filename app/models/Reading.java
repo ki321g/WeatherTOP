@@ -1,12 +1,14 @@
 package models;
 
-import javax.persistence.Entity;
-
-import play.db.jpa.Model;
 import utilities.Conversions;
+import play.Logger;
+import play.db.jpa.Model;
 
+import javax.persistence.Entity;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
+import java.util.List;
 
 @Entity
 public class Reading extends Model {
@@ -16,10 +18,11 @@ public class Reading extends Model {
   public double windSpeed;
   public double windDirection;
   public int pressure;
+
   public Reading(int code, double temperature, double windSpeed, double windDirection, int pressure) {
     //https://howtodoinjava.com/java/date-time/java8-datetimeformatter-example/
     DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
-    this.dateTime  = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
+    this.dateTime = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
 
     this.code = code;
     this.temperature = temperature;
@@ -48,19 +51,30 @@ public class Reading extends Model {
     return Conversions.calculateWindChill(this.temperature, this.windSpeed);
   }
 
+  public static List<Reading> sortReadings(List<Reading> reading) {
+    reading.sort(Comparator.comparingLong(Reading::getId));
+    Logger.info("Sorting Readings by ID");
+
+    return reading;
+  }
+
   /**** Getters ****/
   public String getDateTime() {
     return dateTime;
   }
+
   public int getCode() {
     return code;
   }
 
-  public double getTemperature() { return temperature;}
+  public double getTemperature() {
+    return temperature;
+  }
 
   public double getWindSpeed() {
     return windSpeed;
   }
+
   public double getWindDirection() {
     return windDirection;
   }

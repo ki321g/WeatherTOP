@@ -3,15 +3,11 @@ package controllers;
 import models.Member;
 import play.Logger;
 import play.mvc.Controller;
-
-import java.util.HashMap;
-
 public class Accounts extends Controller {
   public static void signup() {
     Logger.info("Rendering Signup");
     render("signup.html");
   }
-
   public static void login() {
     Logger.info("Rendering Login");
     render("login.html");
@@ -22,14 +18,6 @@ public class Accounts extends Controller {
     Member member = Accounts.getLoggedInMember();
     render("profile.html", member);
   }
-/*
-  public static void register(String firstname, String lastname, String email, String password) {
-    Logger.info("Registering new user " + email);
-    Member member = new Member(firstname, lastname, email, password);
-    member.save();
-    redirect("/login");
-  }
-*/
 public static void register(String firstname, String lastname, String email, String password) {
   Logger.info("Registering new user " + email.toLowerCase());
   Member memberCheck = Member.findByEmail(email.toLowerCase());
@@ -42,7 +30,6 @@ public static void register(String firstname, String lastname, String email, Str
     String signupFail = "Signup failed, Email Already In Use!";
     render("signup.html", signupFail);
   }
-
 }
   public static void authenticate(String email, String password) {
     Logger.info("Attempting to authenticate with " + email + ":" + password);
@@ -66,13 +53,11 @@ public static void register(String firstname, String lastname, String email, Str
       render("/login.html", loginFail);
     }
   }
-
   public static void logout() {
     Logger.info("Logging User Out");
     session.clear();
     redirect("/");
   }
-
   public static Member getLoggedInMember() {
     Member member = null;
     if (session.contains("logged_in_Memberid")) {
@@ -83,7 +68,6 @@ public static void register(String firstname, String lastname, String email, Str
     }
     return member;
   }
-
   public static void update(String firstname, String lastname, String email, String password) {
     Logger.info("User details Udated " );
     getLoggedInMember().firstname = firstname;

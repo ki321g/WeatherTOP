@@ -12,7 +12,8 @@
         </tr>
         </thead>
         <tbody>
-        #{list items:_station.readings, as:'reading'}
+
+        #{list items:_station.getSortedReadings(), as:'reading'}
         <tr>
             <td class="has-text-centered">${reading.getDateTime()}</td>
             <td class="has-text-centered">${reading.getCode()}</td>

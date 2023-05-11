@@ -1,6 +1,9 @@
 package controllers;
 
+
+
 import play.*;
+
 import play.mvc.*;
 import java.util.Comparator;
 import java.time.LocalDateTime;
@@ -9,6 +12,7 @@ import java.util.*;
 import models.*;
 import utilities.Calculations;
 
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class StationCtrl extends Controller {
@@ -69,17 +73,35 @@ public class StationCtrl extends Controller {
     Logger.info("Edit Reading: " + readingid);
     Reading reading = Reading.findById(readingid);
 
-   // DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
+    // DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
    // reading.dateTime  = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
     reading.code = code;
     reading.temperature = temperature;
     reading.windSpeed = windSpeed;
     reading.windDirection = windDirection;
     reading.pressure = pressure;
-    
-    reading.save();
 
+    reading.save();
+/*
+    List<Reading> readingSort = Reading.sortReadings(Reading.findAll());
+    //readingSort.sort(Comparator.comparingLong(Reading::getId));
+    Logger.info("Edit readingSort: " + readingSort);
+    //List<Station> stations = Station.sortStations(Station.findAll());
+    for (Reading readingUpdate : readingSort ) {
+      Reading readingSave = Reading.findById(readingUpdate.id);
+      Logger.info("Edit readingUpdate: " + readingSave);
+
+      readingSave.code = readingUpdate.code ;
+      readingSave.temperature =  readingUpdate.temperature;
+      readingSave.windSpeed = readingUpdate.windSpeed;
+      readingSave.windDirection = readingUpdate.windDirection;
+      readingSave.pressure = readingUpdate.pressure;
+
+      readingSave.save();
+    }
+*/
     redirect("/station/" + id);
   }
+
 
 }
