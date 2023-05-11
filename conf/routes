@@ -29,7 +29,7 @@ POST    /station/{id}/editreading/{readingid}       StationCtrl.editReading
 POST    /station/{id}/addreading                    StationCtrl.addReading
 
 # Ignore favicon requests
-GET     /favicon.ico                            /public/images/favicon.png
+#GET     /favicon.ico                            /public/images/favicon.png
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
