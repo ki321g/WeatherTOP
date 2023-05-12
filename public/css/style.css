@@ -17,16 +17,9 @@ table,
 td,
 th {
 	border: 1px solid #ddd;
-/*	text-align: center;
-	width: 15%;*/
 	padding: 5px;
 }
 
-	/*
-    th {
-        background: hsl(204, 86%, 53%);
-    }
-    */
 .main-navbar:hover {
 	background: hsl(207, 61%, 48%) !important;
 }
@@ -60,7 +53,6 @@ th {
 :root {
 	--ratio: 2;
 }
-
 dialog {
 	border: 3px solid hsl(0, 0%, 48%);
 	border-radius: calc(5px * var(--ratio));
