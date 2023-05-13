@@ -16,6 +16,7 @@ POST   /register                                Accounts.register
 POST   /authenticate                            Accounts.authenticate
 POST   /update                                  Accounts.update
 GET    /logout                                  Accounts.logout
+GET    /deleteaccount/{id}                      Accounts.deleteAccount
 
 # Station control
 GET     /dashboard                              Dashboard.index
@@ -29,7 +30,7 @@ POST    /station/{id}/editreading/{readingid}       StationCtrl.editReading
 POST    /station/{id}/addreading                    StationCtrl.addReading
 
 # Ignore favicon requests
-GET     /favicon.ico                            staticDir:public/images:favicon.png
+GET     /favicon.ico/                            staticDir:public/images:favicon.png
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public

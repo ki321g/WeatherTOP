@@ -156,4 +156,19 @@ public static void register(String firstname, String lastname, String email, Str
     Member member = Accounts.getLoggedInMember();
     render("/profile.html", member, updateSuccess);
   }
+
+  /**
+   * deleteAccount() -
+   * Method deletes the member and all associated
+   * Station and Readings.
+   *
+   * @param memberID Station ID
+   */
+  public static void deleteAccount(Long memberID) {
+    Member member = Accounts.getLoggedInMember();
+    Logger.info("Deleting Member id# " + member.id + " eMail: " + member.email);
+    member.delete();
+    session.clear();
+    redirect("/");
+  }
 }
