@@ -2,7 +2,19 @@ package utilities;
 
 import models.Station;
 
+/**
+ * This utilities class for Calculations
+ *
+ * @author Kieron GArvey
+ * @version 0.1
+ */
 public class Calculations {
+
+  /**
+   * calculateConditions() - Calulates Conditions
+   *
+   * @param station current station
+   */
   public static void calculateConditions(Station station) {
 
     if (station.readings.size() > 0) {

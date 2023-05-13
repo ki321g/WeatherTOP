@@ -9,7 +9,19 @@ import play.Logger;
 import play.mvc.Controller;
 import utilities.Calculations;
 
+/**
+ * This class renders the Dashboard
+ *
+ * @author Kieron GArvey
+ * @version 0.1
+ */
 public class Dashboard extends Controller {
+  /**
+   * index() - This method renders dasboard.html passing in the relevant Stations,
+   * It gets the the logged in member then uses this member
+   * to get the relevant Staions and then Sorts the Stations
+   *
+   */
   public static void index() {
     Logger.info("Rendering Dashboard");
     Logger.info("Current Local Date Time: " + LocalDateTime.now());

@@ -2,7 +2,21 @@ package utilities;
 
 import java.util.HashMap;
 
+/**
+ * This utilities class for Conversions
+ *
+ * @author Kieron GArvey
+ * @version 0.1
+ */
 public class Conversions {
+
+  /**
+   * convertToBeaufort() - Returns Minimum Temperature
+   *
+   * @param windSpeed list of readings
+   * @param returnType return type is value or Label
+   * @return bf as value or Label
+   */
   public static String convertToBeaufort(double windSpeed, String returnType) {
     int bf = 0;
 
@@ -39,6 +53,12 @@ public class Conversions {
     }
 
   }
+  /**
+   * getBeaufortLabel() - Returns Beaufort Label
+   *
+   * @param beaufort list of beaufort
+   * @return latestBeaufortLabel as Label
+   */
   public static String getBeaufortLabel(int beaufort ) {
     HashMap<Integer, String> beaufortLabel = new HashMap<Integer, String>();
 
@@ -59,10 +79,24 @@ public class Conversions {
 
     return latestBeaufortLabel;
   }
+
+  /**
+   * convertToFahrenheit() -  converts Temperature from celsius to fahrenheit
+   *
+   * @param temperature passed in temperature
+   * @return roundCalculation to two decimal places
+   */
   public static double convertToFahrenheit(double temperature) {
     double fahrenheit = temperature * 9 / 5 + 32;
     return roundCalculation(fahrenheit,2);
   }
+
+  /**
+   * convertWeatherCode() -  converts code to text value
+   *
+   * @param code passed in weather code
+   * @return weatherCode code converted to text
+   */
   public static String convertWeatherCode(int code) {
     HashMap<Integer, String> weatherCodeMap = new HashMap<Integer, String>();
 
@@ -80,6 +114,12 @@ public class Conversions {
     return weatherCode;
   }
 
+  /**
+   * convertDegreeToDirection() -  converts code to text value
+   *
+   * @param windDirection passed in wind direction
+   * @return windDirectionText windDirection converted to text
+   */
   public static String convertDegreeToDirection(double windDirection) {
     String windDirectionText = "";
 
@@ -121,9 +161,25 @@ public class Conversions {
 
     return windDirectionText;
   }
+
+  /**
+   * calculateWindChill() -  converts code to text value
+   *
+   * @param temperature passed in temperature
+   * @param windSpeed passed in windSpeed
+   * @return calcualted wind chill
+   */
   public static double calculateWindChill(double temperature, double windSpeed) {
     return roundCalculation(13.12 + (0.6215 * temperature) - 11.37 * (Math.pow(windSpeed, 0.16)) + 0.3965 * temperature * (Math.pow(windSpeed, 0.16)),2);
   }
+
+  /**
+   * roundCalculation() -  converts code to text value
+   *
+   * @param value passed in value to round
+   * @param places phow many places to round to
+   * @return rounded value
+   */
   public static double roundCalculation(double value, int places) {
     double scale = Math.pow(10, places);
     return Math.round(value * scale) / scale;

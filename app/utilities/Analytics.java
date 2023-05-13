@@ -3,7 +3,20 @@ package utilities;
 import models.Reading;
 import java.util.List;
 
+/**
+ * This utilities class for Analytics
+ *
+ * @author Kieron GArvey
+ * @version 0.1
+ */
 public class Analytics {
+
+  /**
+   * minTemperature() - Returns Minimum Temperature
+   *
+   * @param readings list of readings
+   * @return minTemperature Minimum Temperature
+   */
   public static Reading minTemperature(List<Reading> readings) {
     Reading minTemperature = null;
     if (readings.size() > 0) {
@@ -18,6 +31,12 @@ public class Analytics {
     return minTemperature;
   }
 
+  /**
+   * maxTemperature() - Returns Maximum Temperature
+   *
+   * @param readings list of readings
+   * @return maxTemperature Maximum Temperature
+   */
   public static Reading maxTemperature(List<Reading> readings) {
     Reading maxTemperature = null;
 
@@ -32,6 +51,12 @@ public class Analytics {
     return maxTemperature;
   }
 
+  /**
+   * minWindSpeed() - Returns Minimum WindSpeed
+   *
+   * @param readings list of readings
+   * @return minWindSpeed Minimum Temperature
+   */
   public static Reading minWindSpeed(List<Reading> readings) {
     Reading minWindSpeed = null;
     if (readings.size() > 0) {
@@ -45,6 +70,12 @@ public class Analytics {
     return minWindSpeed;
   }
 
+  /**
+   * maxWindSpeed() - Returns Maximum WindSpeed
+   *
+   * @param readings list of readings
+   * @return maxWindSpeed Maximum WindSpeed
+   */
   public static Reading maxWindSpeed(List<Reading> readings) {
     Reading maxWindSpeed = null;
     if (readings.size() > 0) {
@@ -58,6 +89,12 @@ public class Analytics {
     return maxWindSpeed;
   }
 
+  /**
+   * minPressure() - Returns Minimum Pressure
+   *
+   * @param readings list of readings
+   * @return minPressure Minimum Pressure
+   */
   public static Reading minPressure(List<Reading> readings) {
     Reading minPressure = null;
     if (readings.size() > 0) {
@@ -72,6 +109,12 @@ public class Analytics {
     return minPressure;
   }
 
+  /**
+   * maxPressure() - Returns Maximum Pressure
+   *
+   * @param readings list of readings
+   * @return maxPressure Maximum Pressure
+   */
   public static Reading maxPressure(List<Reading> readings) {
     Reading maxPressure = null;
     if (readings.size() > 0) {
@@ -86,6 +129,12 @@ public class Analytics {
     return maxPressure;
   }
 
+  /**
+   * temperatureTrend() - Returns the current Temperature trend if any
+   *
+   * @param readings list of readings
+   * @return String of higher, lower or no-change
+   */
   public static String temperatureTrend(List<Reading> readings) {
     if (readings.size() >= 3) {
       if (readings.get(readings.size() - 1).temperature > readings.get(readings.size() - 2).temperature
@@ -102,6 +151,12 @@ public class Analytics {
     }
   }
 
+  /**
+   * windSpeedTrend() - Returns the current windSpeed trend if any
+   *
+   * @param readings list of readings
+   * @return String of higher, lower or no-change
+   */
   public static String windSpeedTrend(List<Reading> readings) {
     if (readings.size() >= 3) {
       if (readings.get(readings.size() - 1).windSpeed > readings.get(readings.size() - 2).windSpeed
@@ -118,6 +173,12 @@ public class Analytics {
     }
   }
 
+  /**
+   * pressureTrend() - Returns the current pressure trend if any
+   *
+   * @param readings list of readings
+   * @return String of higher, lower or no-change
+   */
   public static String pressureTrend(List<Reading> readings) {
     if (readings.size() >= 3) {
       if (readings.get(readings.size() - 1).pressure > readings.get(readings.size() - 2).pressure

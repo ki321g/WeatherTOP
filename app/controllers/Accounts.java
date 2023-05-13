@@ -3,21 +3,59 @@ package controllers;
 import models.Member;
 import play.Logger;
 import play.mvc.Controller;
+
+/**
+ * This class handles user Accounts
+ *
+ * @author Kieron GArvey
+ * @version 0.1
+ */
 public class Accounts extends Controller {
+
+  /**
+   * signup() - This method renders signup.html
+   *
+   */
   public static void signup() {
     Logger.info("Rendering Signup");
     render("signup.html");
   }
+
+  /**
+   * login() - This method renders login.html
+   *
+   */
   public static void login() {
     Logger.info("Rendering Login");
     render("login.html");
   }
 
+  /**
+   * profile() - This method renders profile.html
+   * Method gets the logged in member and passes
+   * the member details to the profile.html
+   *
+   */
   public static void profile() {
     Logger.info("Rendering Profile");
     Member member = Accounts.getLoggedInMember();
     render("profile.html", member);
   }
+
+  /**
+   * register() - This method renders register.html
+   * Method checks if the email already exists and
+   * that the password length is over 7.
+   *
+   * If all checks are ok the method redirects to the login page
+   * If there is an issue the method renders the singup.html passing
+   * signupFail to it to display the fail reason.
+   *
+   * @param firstname New Member First Name
+   * @param lastname New Member Last Name
+   * @param email New Member eMail
+   * @param password New Member Password
+   */
 public static void register(String firstname, String lastname, String email, String password) {
   Logger.info("Registering new user " + email.toLowerCase());
   Member memberCheck = Member.findByEmail(email.toLowerCase());
@@ -35,6 +73,18 @@ public static void register(String firstname, String lastname, String email, Str
     render("signup.html", signupFail);
   }
 }
+
+  /**
+   * authenticate() - Used during login to check User details
+   * Method find the member with the email and checks if
+   * the password is correct.
+   *
+   * Redireted to Dashboard if all is OK
+   * Render Login with error if there is an issue
+   *
+   * @param email New Member eMail
+   * @param password New Member Password
+   */
   public static void authenticate(String email, String password) {
     Logger.info("Attempting to authenticate with " + email + ":" + password);
 
@@ -57,11 +107,22 @@ public static void register(String firstname, String lastname, String email, Str
       render("/login.html", loginFail);
     }
   }
+
+  /**
+   * logout() - This method logs user out by clearing the session
+   *
+   */
   public static void logout() {
     Logger.info("Logging User Out");
     session.clear();
     redirect("/");
   }
+
+  /**
+   * getLoggedInMember() - This method gets teh logged in member
+   *
+   * @return logged in member
+   */
   public static Member getLoggedInMember() {
     Member member = null;
     if (session.contains("logged_in_Memberid")) {
@@ -72,6 +133,18 @@ public static void register(String firstname, String lastname, String email, Str
     }
     return member;
   }
+
+  /**
+   * update() -
+   * Method updates the member and renders profile.html
+   * passes the member and update success message back to
+   * the profile.html page
+   *
+   * @param firstname New Member First Name
+   * @param lastname New Member Last Name
+   * @param email New Member eMail
+   * @param password New Member Password
+   */
   public static void update(String firstname, String lastname, String email, String password) {
     Logger.info("User details Udated " );
     getLoggedInMember().firstname = firstname;
