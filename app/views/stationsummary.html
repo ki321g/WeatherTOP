@@ -3,7 +3,6 @@
 
 #{membersmenu id:"dashboard"/}
 
-
 <!-- Content Start -->
 <section class="section pt-5 pb-3">
     <div class="container">
@@ -34,17 +33,13 @@
             </div>
         </section>
         <!-- Hero Welcome User End-->
-
         <div class="container is-12 mt-3 p-0">
             <div class="card events-card ">
                 <header class="card-header has-background-info mb-2">
                     <p class="card-header-title is-uppercase has-text-white is-size-4 py-2">
-
                     <div class="empty-div"></div>
                     </p>
                 </header>
-
-
                 <div class="columns is-multiline px-2">
                     #{list items:stations, as:'station'}
                             #{if station.readings.size() > 0}
@@ -54,8 +49,6 @@
                         #{/if}
                     #{/list}
                 </div>
-
-
                 <footer class="card-footer has-background-grey mt-4">
                     <div class="empty-div is-size-4 py-2"></div>
                 </footer>

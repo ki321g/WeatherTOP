@@ -6,7 +6,6 @@
 <!-- Content Start -->
 <section class="section pt-5 pb-3">
     <div class="container">
-
         <!-- Hero Welcome USer -->
         <section class="hero is-info welcome is-small">
             <div class="columns is-vcentered">
@@ -34,7 +33,6 @@
             </div>
         </section>
         <!-- Hero Welcome User End-->
-
         <!-- Stations -->
         <!-- ADD Station -->
         #{addstation station:station /}
@@ -61,7 +59,6 @@
                     </a>
                 </div>
                 #{/else}
-
                 <footer class="card-footer has-background-grey mt-4">
                     <a href="/station/${station.id}" class="card-footer-item has-text-white is-size-6 py-0">
                          <span class="icon pr-4">
@@ -73,7 +70,8 @@
                     </a>
                     <a data-open-modal=""
                        class="card-footer-item js-modal-trigger has-text-white is-size-6 p-0"
-                       data-target="modal-delete-station" data-id="delete-id" data-name="${station.name}" data-todelete="Station"
+                       data-target="modal-delete-station" data-id="delete-id" data-name="${station.name}"
+                       data-todelete="Station"
                        data-link="/dashboard/deletestation/${station.id}" aria-label="more options">
                         <div class="container is-fullwidth has-text-centered">
                            <span class="icon pr-3">
@@ -105,7 +103,8 @@
             <div id="delete-item" class="is-size-4 has-text-weight-semi-bold has-text-centered pb-0"></div>
         </section>
         <footer class="modal-card-foot has-background-grey py-0">
-            <a id="delete-station" class="card-footer-item delete-station has-text-white is-size-6 py-2">Delete the Station</a>
+            <a id="delete-station" class="card-footer-item delete-station has-text-white is-size-6 py-2">Delete the
+                Station</a>
             <a class="card-footer-item cancel-delete has-text-white is-size-6 py-2">Cancel</a>
         </footer>
     </div>
@@ -137,7 +136,6 @@
             const todelete = $trigger.dataset.todelete;
             const $target = document.getElementById(modal);
 
-
             $trigger.addEventListener('click', () => {
                 document.getElementById("delete-station").href = link;
                 document.getElementById("delete-item").innerHTML = "Are your sure you want to delete the " + name + " " + todelete + "?";
@@ -163,5 +161,4 @@
             }
         });
     });
-
 </script>

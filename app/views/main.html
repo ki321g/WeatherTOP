@@ -5,42 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>#{get 'title' /}</title>
+    <!-- FAVICON --->
     <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <!-- Bulma Version 0.9.0-->
+    <!-- Bulma Version 0.9.4-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/dd084b05a9.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/public/css/style.css">
-
+    <!-- Google Charts-->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
-        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.load('current', {'packages': ['corechart']});
     </script>
-
-    <!--<script src="/public/js/googlecharts.js"></script>-->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
-
 <body>
-
 <!-- Start -->
 <section class="is-fullheight is-flex is-flex-direction-column">
-
     <!-- Content Start -->
     #{doLayout /}
     <!-- Content End -->
-
-    <!-- Footer Start -->
-    <!--   <footer class="has-text-centered is-flex-align-items-flex-end mt-auto mb-4">
-           <large>
-               <span class="has-text-grey">Copyright @2023 </span><span
-                   class="has-text-grey has-text-weight-bold is-uppercase">Weather</span><span
-                   class="has-text-warning is-uppercase">Top</span> <span class="has-text-grey">Inc.</span>
-           </large>
-       </footer>
-     -->  <!-- Footer End -->
-
     <!-- Footer -->
     <div class="container is-fluid p-0">
         <footer class="footer has-background-white pt-0 pb-6">
@@ -58,13 +42,9 @@
                 </div>
             </div>
         </footer>
-
-
 </section>
 <!-- End -->
 <!-- Custom JS Scripts -->
 <script async type="text/javascript" src="/public/js/main.js"></script>
-
-<!--<script async type="text/javascript" src="/public/js/modal.js"></script>-->
 </body>
 </html>
