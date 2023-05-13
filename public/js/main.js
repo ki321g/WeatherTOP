@@ -174,7 +174,12 @@ function validateRegisterForm() {
         document.getElementById("errPassword").style.display = "block";
         document.getElementById("errPassword").innerHTML = "Enter A Password";
         valid = false;
-    } else {
+    } else if (checkPassword.length < 7) {
+        document.forms["frmRegister"]["password"].classList.add('is-danger');
+        document.getElementById("errPassword").style.display = "block";
+        document.getElementById("errPassword").innerHTML = "Password has to be 7 or more characters";
+        valid = false;
+    }  else {
         document.forms["frmRegister"]["password"].classList.add('is-success');
         document.forms["frmRegister"]["password"].classList.remove('is-danger');
         document.getElementById("errPassword").style.display = "none";

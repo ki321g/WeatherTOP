@@ -21,13 +21,17 @@ public class Accounts extends Controller {
 public static void register(String firstname, String lastname, String email, String password) {
   Logger.info("Registering new user " + email.toLowerCase());
   Member memberCheck = Member.findByEmail(email.toLowerCase());
-  if(memberCheck == null) {
+  if(memberCheck == null && password.length() >= 7) {
     Member member = new Member(firstname, lastname, email.toLowerCase(), password);
     member.save();
     redirect("/login");
-  } else {
+  } else if(password.length() >= 7)  {
     Logger.info("Email Already Used");
     String signupFail = "Signup failed, Email Already In Use!";
+    render("signup.html", signupFail);
+  }else if(password.length() < 7)  {
+    Logger.info("Password To Short");
+    String signupFail = "Signup failed, Password has to be greater than 7 characters!";
     render("signup.html", signupFail);
   }
 }
