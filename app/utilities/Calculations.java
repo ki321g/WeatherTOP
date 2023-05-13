@@ -1,14 +1,6 @@
 package utilities;
 
-import com.google.gson.JsonArray;
-import models.Reading;
 import models.Station;
-import play.mvc.results.Result;
-import play.utils.HTML;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Calculations {
   public static void calculateConditions(Station station) {
