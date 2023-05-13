@@ -1,6 +1,5 @@
 package models;
 
-
 import play.Logger;
 import play.db.jpa.Model;
 
@@ -13,7 +12,6 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Station extends Model {
-
   public String name;
   public double latitude;
   public double longitude;
@@ -22,7 +20,6 @@ public class Station extends Model {
   public List<Reading> readings = new ArrayList<Reading>();
   public double minTemperature;
   public double maxTemperature;
-
   public int minPressure;
   public int maxPressure;
   public double minWindSpeed;
@@ -40,11 +37,6 @@ public class Station extends Model {
     return name;
   }
 
-  /* If i get time i am planning on drawing a graph of up to the last 10 readings
-   * I found arraylist subList https://www.geeksforgeeks.org/arraylist-sublist-method-in-java-with-examples/
-   * https://www.geeksforgeeks.org/find-first-and-last-element-of-arraylist-in-java/
-   * Might not use this
-   */
   public List<Reading> latestReading(int readingSize) {
     List<Reading> latestReadings = null;
     if (readings.size() > 0) {

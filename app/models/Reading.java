@@ -20,7 +20,6 @@ public class Reading extends Model {
   public int pressure;
 
   public Reading(int code, double temperature, double windSpeed, double windDirection, int pressure) {
-    //https://howtodoinjava.com/java/date-time/java8-datetimeformatter-example/
     DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
     this.dateTime = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
 
@@ -34,7 +33,6 @@ public class Reading extends Model {
   public double fahrenheit() {
     return Conversions.convertToFahrenheit(this.temperature);
   }
-
   public String beaufort(String returnType) {
     return Conversions.convertToBeaufort(this.windSpeed, returnType);
   }

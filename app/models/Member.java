@@ -18,21 +18,16 @@ public class Member extends Model {
 
   @OneToMany(cascade = CascadeType.ALL)
   public List<Station> stations = new ArrayList<Station>();
-
   public Member(String firstname, String lastname, String email, String password) {
     this.firstname = firstname;
     this.lastname = lastname;
     this.email = email;
     this.password = password;
   }
-
   public static Member findByEmail(String email) {
     return find("email", email.toLowerCase()).first();
   }
-
-  public boolean checkPassword(String password) {
-    return this.password.equals(password);
-  }
+  public boolean checkPassword(String password) {return this.password.equals(password);}
 
   public String getMemberDetails(String returnType, int memberID) {
     HashMap<String, String> memberDetails = new HashMap<String, String>();
