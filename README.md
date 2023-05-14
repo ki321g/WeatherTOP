@@ -19,8 +19,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -62,8 +60,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-<img src="readme/images/play-logo.png" style="width: 30%; height: auto; margin: 10px 0;">
-<img src="readme/images/bulma-logo.png" style="max-width:25%; height: auto; margin: 10px 0;">
+<img src="readme/images/play-logo.png" style="width: 20%; height: auto; margin: 10px 0;">
+<img src="readme/images/bulma-logo.png" style="max-width:20%; height: auto; margin: 10px 0;">
 </div>
 
 
