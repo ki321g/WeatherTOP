@@ -24,6 +24,7 @@ POST    /dashboard/addstation                   StationCtrl.addStation
 GET     /dashboard/deletestation/{id}           StationCtrl.deleteStation
 
 
+GET     /station                                   StationCtrl.index
 GET     /station/{id}                               StationCtrl.index
 GET     /station/{id}/deletereading/{readingid}     StationCtrl.deleteReading
 POST    /station/{id}/editreading/{readingid}       StationCtrl.editReading

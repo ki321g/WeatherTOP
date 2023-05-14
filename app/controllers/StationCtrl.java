@@ -23,10 +23,17 @@ public class StationCtrl extends Controller {
    * @param id Station ID
    */
   public static void index(Long id) {
-    Station station = Station.findById(id);
-    Logger.info("Station id = " + id);
-    Calculations.calculateConditions(station);
-    render("station.html", station);
+    Member member = Accounts.getLoggedInMember();
+
+    if (member != null) {
+      Logger.info("Rendering Station id#" + id);
+      Station station = Station.findById(id);
+      Calculations.calculateConditions(station);
+      render("station.html", station);
+    } else {
+      Logger.info("Member not logged in");
+      redirect("/login");
+    }
   }
 
   /**
