@@ -4,7 +4,7 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="readme/images/weathertop.png" alt="Logo">
   </a>
-  <h1 align="center">The Application was built for a combined Progamming Fundimentals & Web-Dev Assignment HDCS2023</h1>
+  <h1 align="center">Combined Progamming Fundimentals & Web-Dev Assignment HDCS2023</h1>
 
   <p align="center">
      An awesome README template to jumpstart your projects!
