@@ -15,9 +15,6 @@
 <div align="center">
   <img src="readme/images/weathertop.png" alt="Logo">
   <h1 align="center">Progamming Fundimentals & Web-Dev Assignment</h1>
-  <p align="center">
-     An awesome README template to jumpstart your projects!
-  </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
