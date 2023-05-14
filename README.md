@@ -61,9 +61,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 ### Built With
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  [![Play]<img src="[Play]" style="max-width: 100%; height: auto; margin: 10px 0;">[Play-url]
+  [![Bulma]<img src="[Bulma]" style="max-width: 100%; height: auto; margin: 10px 0;">[Bulma-url]
+</div>
 
-* [![Play][Play]][Play-url]
-* [![Bulma][Bulma]][Bulma-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
