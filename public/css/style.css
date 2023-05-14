@@ -58,3 +58,21 @@ dialog {
 	border-radius: calc(5px * var(--ratio));
 	padding: 0px !important;
 }
+
+
+/*======================
+    404 page
+=======================*/
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+	background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+	height: 400px;
+	background-position: center;
+}
+.button_404 {
+	padding-top: 270px;
+}
+.custom_404 #routes {
+	background: #ffffff !important;
+}

@@ -1,10 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'404 Page Not Found' /}
 #{if session.get("logged_in_Memberid") != null }
-    #{membersmenu id:"home"/}
+#{membersmenu id:"home"/}
 #{/if}
 #{else}
-    #{menu id:"home"/}
+#{menu id:"home"/}
 #{/else}
 
 
@@ -38,14 +38,30 @@
                     </p>
                 </header>
                 <section class="columns is-centered px-5">
-                    <div class="column is-12">
-                        #{if play.mode.name() == 'DEV'}
-                            #{404 result /}
-                        #{/if}
-                        #{else}
-                        <p>
-                            ${result.message}
-                        </p>
+                    #{if play.mode.name() == 'DEV'}
+                    <div class="column is-12 custom_404">
+                       #{404 result /}
+                    #{/if}
+                      #{else}
+                    <div class="column is-8">
+                        <section class="page_404">
+                            <div class="container">
+                                <div class="">
+                                    <div class=" ">
+                                        <div class="">
+                                            <div class="four_zero_four_bg">
+                                                <div class=" is-centered is-size-1 has-text-weight-bold has-text-centered">
+                                                    404
+                                                </div>
+                                                <div class="buttons are-large is-centered button_404">
+                                                    <button class="button is-warning link_404" onclick="history.back()">Go Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         #{/else}
                     </div>
                 </section>
