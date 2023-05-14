@@ -46,13 +46,10 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://weathertop.cleverapps.io/)
-
 ### Assignment Scope
 WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. This lowcost device takes a set of meteorological readings and displays these on a simple LCD display. WeatherTop Inc. are seeking a Web companion application for the device. This document outlines my submission for this application.
 
