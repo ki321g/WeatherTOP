@@ -23,14 +23,12 @@ GET     /dashboard                              Dashboard.index
 POST    /dashboard/addstation                   StationCtrl.addStation
 GET     /dashboard/deletestation/{id}           StationCtrl.deleteStation
 
-
-GET     /station                                   StationCtrl.index
 GET     /station/{id}                               StationCtrl.index
 GET     /station/{id}/deletereading/{readingid}     StationCtrl.deleteReading
 POST    /station/{id}/editreading/{readingid}       StationCtrl.editReading
 POST    /station/{id}/addreading                    StationCtrl.addReading
 
-# Ignore favicon requests
+# Favicons
 GET     /favicon.ico/                            staticDir:public/images:favicon.png
 
 # Map static resources from the /app/public folder to the /public path

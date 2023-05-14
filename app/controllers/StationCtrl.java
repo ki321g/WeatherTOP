@@ -5,10 +5,12 @@ import play.mvc.*;
 import models.*;
 import utilities.Calculations;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
- *  This class controls Stations and relevant Station Readings.
+ * This class controls Stations and relevant Station Readings.
  *
  * @author Kieron GArvey
  * @version 0.1
@@ -23,13 +25,24 @@ public class StationCtrl extends Controller {
    * @param id Station ID
    */
   public static void index(Long id) {
+    boolean checkMemberStations = false;
     Member member = Accounts.getLoggedInMember();
+    List<Station> stationsToCheck = member.stations;
 
-    if (member != null) {
+    for (Station stationCheck : stationsToCheck) {
+      if (stationCheck.id == id) {
+        checkMemberStations = true;
+      }
+    }
+
+    if (member != null && checkMemberStations) {
       Logger.info("Rendering Station id#" + id);
       Station station = Station.findById(id);
       Calculations.calculateConditions(station);
       render("station.html", station);
+    } else if (!checkMemberStations) {
+      Logger.info("Station not Members");
+      redirect("/dashboard");
     } else {
       Logger.info("Member not logged in");
       redirect("/login");
@@ -42,8 +55,8 @@ public class StationCtrl extends Controller {
    * for teh logged in member then redirects the member to
    * the new station to enter there first reading.
    *
-   * @param name Station name
-   * @param latitude Station latitude
+   * @param name      Station name
+   * @param latitude  Station latitude
    * @param longitude Station longitude
    */
   public static void addStation(String name, double latitude, double longitude) {
@@ -82,7 +95,7 @@ public class StationCtrl extends Controller {
    * Method uses passed in Station ID and Reading ID to find the relevant
    * Station and Reading. It then deletes the reading.
    *
-   * @param id Station ID
+   * @param id        Station ID
    * @param readingid Reading readingid
    */
   public static void deletereading(Long id, Long readingid) {
@@ -104,12 +117,12 @@ public class StationCtrl extends Controller {
    * Method uses passed in Reading params to create a new reading
    * for the passed in Station ID
    *
-   * @param id Station ID
-   * @param code Reading code
-   * @param temperature Reading temperature
-   * @param windSpeed Reading windSpeed
+   * @param id            Station ID
+   * @param code          Reading code
+   * @param temperature   Reading temperature
+   * @param windSpeed     Reading windSpeed
    * @param windDirection Reading windDirection
-   * @param pressure Reading pressure
+   * @param pressure      Reading pressure
    */
   public static void addReading(Long id, int code, double temperature, double windSpeed, double windDirection, int pressure) {
     Logger.info("Adding Reading: " + id);
@@ -124,13 +137,13 @@ public class StationCtrl extends Controller {
    * editReading() - This method redirects to the relevant station
    * Method uses passed in the new Reading params to edit a the reading
    *
-   * @param id Station ID
-   * @param readingid Station readingid
-   * @param code Reading code
-   * @param temperature Reading temperature
-   * @param windSpeed Reading windSpeed
+   * @param id            Station ID
+   * @param readingid     Station readingid
+   * @param code          Reading code
+   * @param temperature   Reading temperature
+   * @param windSpeed     Reading windSpeed
    * @param windDirection Reading windDirection
-   * @param pressure Reading pressure
+   * @param pressure      Reading pressure
    */
   public static void editReading(Long id, Long readingid, int code, double temperature, double windSpeed, double windDirection, int pressure) {
     Logger.info("Edit Reading: " + readingid);
