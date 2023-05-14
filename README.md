@@ -59,7 +59,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 ### Built With
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<div>
 <img src="readme/images/play-logo.png" style="width: 25%; height: auto; margin: 10px 0;">
 <img src="readme/images/bulma-logo.png" style="width:25%; height: auto; margin: 10px 0;padding-left: 40px;">
 </div>
