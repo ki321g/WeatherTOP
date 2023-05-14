@@ -4,20 +4,10 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="readme/images/weathertop.png" alt="Logo">
   </a>
-
-  <h3 align="center">Best-README-Template</h3>
+  <h1 align="center">A companion Web Application for the WeatherTop 1000.</h1>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    The Application was built for a combined Progamming Fundimentals & Web-Dev Assignment for Higher Diploma in Computer Science 2023!
   </p>
 </div>
 
