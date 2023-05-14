@@ -62,8 +62,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  [![Play]<img src="[Play]" style="max-width: 100%; height: auto; margin: 10px 0;">[Play-url]
-  [![Bulma]<img src="[Bulma]" style="max-width: 100%; height: auto; margin: 10px 0;">[Bulma-url]
+<img src="readme/images/play-logo.png" style="max-width: 100%; height: auto; margin: 10px 0;">
+<img src="readme/images/bulma-logo.png" style="max-width: 100%; height: auto; margin: 10px 0;">
 </div>
 
 
