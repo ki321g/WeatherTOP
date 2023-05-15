@@ -25,6 +25,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -50,6 +51,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 [![Product Name Screen Shot][product-screenshot]](https://weathertop.cleverapps.io/)
 ### Developed With
   <img src="readme/images/play-logo.png" style="width: 25%; height: auto; margin: 10px 0;">
+  
 ### Styled With
 <img src="readme/images/bulma-logo.png" style="width:25%; height: auto; margin: 10px 0;padding-left: 40px;">
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
