@@ -6,6 +6,26 @@
 <!-- Login Start -->
 <!-- Content Start -->
 <section class="section pt-5 pb-3">
+    <!-- Flash Message Start -->
+    #{if flash.success}
+    <div class="notification flash-notification is-success m-1">
+        <button class="delete"></button>
+        ${flash.success}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+                const $notification = $delete.parentNode;
+
+                $delete.addEventListener('click', () => {
+                    $notification.parentNode.removeChild($notification);
+                });
+            });
+        });
+    </script>
+    #{/if}
+    <!-- Flash Message End -->
     <div class="container">
         <!-- Hero Welcome User -->
         <section class="hero is-info welcome is-small">

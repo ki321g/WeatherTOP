@@ -8,6 +8,26 @@
 #{menu id:"home"/}
 #{/else}
 
+<!-- Flash Message Start -->
+#{if flash.success}
+<div class="notification flash-notification is-success m-5">
+    <button class="delete"></button>
+    ${flash.success}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+            const $notification = $delete.parentNode;
+
+            $delete.addEventListener('click', () => {
+                $notification.parentNode.removeChild($notification);
+            });
+        });
+    });
+</script>
+#{/if}
+<!-- Flash Message End -->
 <!-- Content Start -->
 <section class="container hero">
     <section class="section pt-5 pb-3">

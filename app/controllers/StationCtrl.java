@@ -30,11 +30,11 @@ public class StationCtrl extends Controller {
     List<Station> stationsToCheck = member.stations;
 
     for (Station stationCheck : stationsToCheck) {
-      if (stationCheck.id == id) {
+      Logger.info("stationCheck " + stationCheck.id);
+      if (stationCheck.id.equals(id)) {
         checkMemberStations = true;
       }
     }
-
     if (member != null && checkMemberStations) {
       Logger.info("Rendering Station id#" + id);
       Station station = Station.findById(id);

@@ -59,7 +59,13 @@ dialog {
 	padding: 0px !important;
 }
 
-
+/*======================
+    Flash Notifications
+=======================*/
+.flash-notification {
+	position: absolute;
+	z-index: 1;
+}
 /*======================
     404 page
 =======================*/
@@ -76,3 +82,4 @@ dialog {
 .custom_404 #routes {
 	background: #ffffff !important;
 }
+

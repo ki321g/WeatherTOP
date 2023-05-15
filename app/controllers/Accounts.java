@@ -62,6 +62,7 @@ public static void register(String firstname, String lastname, String email, Str
   if(memberCheck == null && password.length() >= 7) {
     Member member = new Member(firstname, lastname, email.toLowerCase(), password);
     member.save();
+    flash("success", "Member Account Created Successfully!");
     redirect("/login");
   } else if(password.length() >= 7)  {
     Logger.info("Email Already Used");
@@ -169,6 +170,7 @@ public static void register(String firstname, String lastname, String email, Str
     Logger.info("Deleting Member id# " + member.id + " eMail: " + member.email);
     member.delete();
     session.clear();
+    flash("success", "Member Account Deleted Successfully!");
     redirect("/");
   }
 }
