@@ -57,12 +57,15 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FEATURES -->
-## Features
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-### User Accounts
+## User Accounts
 [![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
+<!-- Features -->
+## Features
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
 
