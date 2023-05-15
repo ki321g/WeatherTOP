@@ -24,8 +24,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#developed-with">Developed With</a></li>
+        <li><a href="#styled-with">Styled With</a></li>
       </ul>
     </li>
     <li>
