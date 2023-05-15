@@ -29,7 +29,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#features">Features</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -56,11 +56,13 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <img src="readme/images/bulma-logo.png" style="width:25%; height: auto; margin: 10px 0;padding-left: 40px;">
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- FEATURES -->
+## Features
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
+### User Accounts
+[features-account Screen Shot][features-account]
 
 ### Prerequisites
 
@@ -167,6 +169,7 @@ Project Link: [https://github.com/ki321g/WeatherTOP/](hhttps://github.com/ki321g
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: readme/images/weathertop.gif
+[features-account]: readme/images/weathertop_user.gif
 [Play]: readme/images/play-logo.png
 [Play-url]: https://www.playframework.com/
 [Bulma]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
