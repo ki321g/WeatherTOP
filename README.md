@@ -49,16 +49,15 @@
 WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. This lowcost device takes a set of meteorological readings and displays these on a simple LCD display. WeatherTop Inc. are seeking a Web companion application for the device. This document outlines my submission for this Assignment.
 
 [![Product Name Screen Shot][product-screenshot]](https://weathertop.cleverapps.io/)
-### Developed With
-  <img src="readme/images/play-logo.png" style="width: 25%; height: auto; margin: 10px 0;">
-  
-### Styled With
-<img src="readme/images/bulma-logo.png" style="width:25%; height: auto; margin: 10px 0;padding-left: 40px;">
+| Developed With| Styled With | 
+| :----:        |    :----:   |
+| <img src="readme/images/play-logo.png" style="height: 200px;">    | <img src="readme/images/bulma-logo.png">       |
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FEATURES -->
 ## User Accounts
-[![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
+<img src="readme/images/weathertop.gif" style="max-height: 350px;"> 
+
 ### Account Features
 - [x] Sign up and Login (both with Form Validation)
 - [x] Loading from the data.yml
@@ -71,7 +70,8 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Stations
-[![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
+<img src="readme/images/weathertop_user.gif" style="max-height: 350px;"> 
+
 ### Station Features
 - [x] Create Station
     - [x] Name 
