@@ -59,49 +59,49 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <!-- FEATURES -->
 ## User Accounts
 [![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
-### Features
-- [ ] Sign up and Login (both with Form Validation)
-- [ ] Loading from the data.yml
-    - [ ] Users 
-    - [ ] User Associated Stations
-    - [ ] User Associated Readings   
-- [ ] Profile
-    - [ ] Edit/Update Account
-    - [ ] Delete Account
+### Account Features
+- [x] Sign up and Login (both with Form Validation)
+- [x] Loading from the data.yml
+    - [x] Users 
+    - [x] User Associated Stations
+    - [x] User Associated Readings   
+- [x] Profile
+    - [x] Edit/Update Account
+    - [x] Delete Account
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Stations
 [![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
-### Features
-- [ ] Create Station
-    - [ ] Name 
-    - [ ] Longitude
-    - [ ] Latitude  
-- [ ] Delete Station
-- [ ] Station Displays
-    - [ ] Latest weather with SVG moving icons/images
-    - [ ] Temperature in Celsius & Fahrienheit
-    - [ ] Wind in km.hr & Bft (Beaufort)    
-    - [ ] Pressure in hPa
- - [ ] Weather Min/Max Readings
- - [ ] Weatehr Trends
+### Station Features
+- [x] Create Station
+    - [x] Name 
+    - [x] Longitude
+    - [x] Latitude  
+- [x] Delete Station
+- [x] Station Displays
+    - [x] Latest weather with SVG moving icons/images
+    - [x] Temperature in Celsius & Fahrienheit
+    - [x] Wind in km.hr & Bft (Beaufort)    
+    - [x] Pressure in hPa
+ - [x] Weather Min/Max Readings
+ - [x] Weatehr Trends
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Readings
 [![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
-### Features
-- [ ] Create 
-    - [ ] Date/Time
-    - [ ] Code 
-    - [ ] Temperature
-    - [ ] Wind Speed  
-    - [ ] Pressure
-- [ ] Edit/Delete Readings
-- [ ] Station Displays
-    - [ ] Latest weather
-    - [ ] Temperature in Celsius & Fahrienheit
-    - [ ] Wind in km.hr & Bft (Beaufort)    
-    - [ ] Pressure in hPa
+### Reading Features
+- [x] Create 
+    - [x] Date/Time
+    - [x] Code 
+    - [x] Temperature
+    - [x] Wind Speed  
+    - [x] Pressure
+- [x] Edit/Delete Readings
+- [x] Station Displays
+    - [x] Latest weather
+    - [x] Temperature in Celsius & Fahrienheit
+    - [x] Wind in km.hr & Bft (Beaufort)    
+    - [x] Pressure in hPa
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
