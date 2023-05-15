@@ -62,7 +62,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 ### User Accounts
-[features-account Screen Shot][features-account]
+[![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
 
 ### Prerequisites
 
