@@ -171,7 +171,7 @@ Project Link: [https://github.com/ki321g/WeatherTOP/](hhttps://github.com/ki321g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: readme/images/homepage.png
+[product-screenshot]: readme/images/weathertop.gif
 [Play]: readme/images/play-logo.png
 [Play-url]: https://www.playframework.com/
 [Bulma]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
