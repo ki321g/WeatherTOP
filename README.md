@@ -59,8 +59,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <!-- FEATURES -->
 ## User Accounts
 [![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
-<!-- Features -->
-## Features
+### Features
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
