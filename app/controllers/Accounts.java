@@ -75,7 +75,7 @@ public static void register(String firstname, String lastname, String email, Str
   }
 }
 
-  /**  
+  /**
    * authenticate() - Used during login to check User details
    * Method find the member with the email and checks if
    * the password is correct.
