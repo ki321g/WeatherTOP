@@ -120,7 +120,7 @@ public static void register(String firstname, String lastname, String email, Str
   }
 
   /**
-   * getLoggedInMember() - This method gets teh logged in member
+   * getLoggedInMember() - This method gets the logged in member
    *
    * @return logged in member
    */

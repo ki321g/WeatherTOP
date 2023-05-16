@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
 /**
- * This model class is used for Members
+ * This model class is used for Stations
  *
  * @author Kieron GArvey
  * @version 0.1

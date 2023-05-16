@@ -135,7 +135,7 @@ public class StationCtrl extends Controller {
 
   /**
    * editReading() - This method redirects to the relevant station
-   * Method uses passed in the new Reading params to edit a the reading
+   * Method uses the passed in the Reading params to edit the reading
    *
    * @param id            Station ID
    * @param readingid     Station readingid
