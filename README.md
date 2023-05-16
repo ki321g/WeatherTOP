@@ -1,22 +1,11 @@
 <a name="readme-top"></a>
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="readme/images/weathertop.png" alt="Logo">
   <h1 align="center">Progamming Fundimentals & Web-Dev Assignment</h1>
+  <img src="readme/images/weathertop.png" alt="Logo">  
 </div>
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -47,8 +36,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. This lowcost device takes a set of meteorological readings and displays these on a simple LCD display. WeatherTop Inc. are seeking a Web companion application for the device. This document outlines my submission for this Assignment.
-
-[![Product Name Screen Shot][product-screenshot]](https://weathertop.cleverapps.io/)
 | Developed With| Styled With | 
 | :----:        |    :----:   |
 | <img src="readme/images/play-logo.png" style="height: 200px;">    | <img src="readme/images/bulma-logo.png">       |
@@ -204,7 +191,7 @@ Project Link: [https://github.com/ki321g/WeatherTOP/](hhttps://github.com/ki321g
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+[![Product Name Screen Shot][product-screenshot]](https://weathertop.cleverapps.io/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
