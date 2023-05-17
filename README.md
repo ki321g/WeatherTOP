@@ -120,16 +120,6 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -138,8 +128,6 @@ Your Name - Kieron Garvey
 Project Link: [https://github.com/ki321g/WeatherTOP/](https://github.com/ki321g/WeatherTOP/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
