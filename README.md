@@ -57,7 +57,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 
-## Stations
+## User Stations
 <img align="left" width="70%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Station Features
@@ -73,8 +73,8 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br><br>
 
-## Readings
-<img align="left" width="70%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+## User Readings
+<img align="left" width="70%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Reading Features
 - [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
