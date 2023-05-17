@@ -43,7 +43,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 <!-- FEATURES -->
 ## User Accounts
-<img src="readme/images/weathertop.gif" style="max-height: 350px;"> 
+<img align="left" width="50%" src="readme/images/intro.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Account Features
 - [x] Sign up and Login (both with Form Validation)
