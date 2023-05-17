@@ -10,24 +10,12 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#developed-with">Developed With</a></li>
-        <li><a href="#styled-with">Styled With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#features">Features</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#user-account">User Acoounts</a></li>
+    <li><a href="#user-stations">User Stations</a></li>
+    <li><a href="#user-readings">User Readings</a></li>
+    <li><a href="#extras">About The Project</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
