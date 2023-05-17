@@ -11,10 +11,10 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#user-account">User Acoounts</a></li>
+    <li><a href="#user-accounts">User Acoounts</a></li>
     <li><a href="#user-stations">User Stations</a></li>
     <li><a href="#user-readings">User Readings</a></li>
-    <li><a href="#extras">About The Project</a></li>
+    <li><a href="#extras">Extra's</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
