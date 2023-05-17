@@ -86,6 +86,18 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
     - [x] Pressure in hPa
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## User Readings
+<img align="left" width="70%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+
+### Extra Features
+- [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
+- [x] Edit/Delete Readings
+- [x] Station Displays
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
