@@ -84,7 +84,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
     - [x] Temperature in Celsius & Fahrienheit
     - [x] Wind in km.hr & Bft (Beaufort)    
     - [x] Pressure in hPa
-<br><br><br><br><br><br>
+<br><br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
