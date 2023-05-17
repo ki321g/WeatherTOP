@@ -43,7 +43,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 <!-- FEATURES -->
 ## User Accounts
-<img align="left" width="50%" src="readme/images/intro.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="70%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Account Features
 - [x] Sign up and Login (both with Form Validation)
@@ -55,9 +55,10 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
     - [x] Edit/Update Account
     - [x] Delete Account
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
 
 ## Stations
-<img src="readme/images/weathertop_user.gif" style="max-height: 350px;"> 
+<img align="left" width="70%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Station Features
 - [x] Create Station
