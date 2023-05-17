@@ -61,10 +61,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <img align="left" width="70%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Station Features
-- [x] Create Station
-    - [x] Name 
-    - [x] Longitude
-    - [x] Latitude  
+- [x] Create Station (Name , Longitude, Latitude)
 - [x] Delete Station
 - [x] Station Displays
     - [x] Latest weather with SVG moving icons/images
@@ -74,16 +71,13 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
  - [x] Weather Min/Max Readings
  - [x] Weatehr Trends
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br><br>
 
 ## Readings
-[![Features Account Screen Shot][features-account]](https://weathertop.cleverapps.io/signup)
+<img align="left" width="70%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+
 ### Reading Features
-- [x] Create 
-    - [x] Date/Time
-    - [x] Code 
-    - [x] Temperature
-    - [x] Wind Speed  
-    - [x] Pressure
+- [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
 - [x] Edit/Delete Readings
 - [x] Station Displays
     - [x] Latest weather
