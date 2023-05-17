@@ -100,35 +100,32 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Installation
+
+1. Install [Play-1.6.0](https://github.com/playframework/play1/releases/download/1.6.0/play-1.6.0.zip) on your PC 
+2. Clone the repo
+   ```
+   git clone https://github.com/ki321g/WeatherTOP
+   ```
+3. Open command prompt navigate to your project directory
+4. Start Play application in the command prompt
+ ```
+   play run
+   ```
+6. Open Localhost URL
+ ```
+   http://localhost:9000/
+   ``` 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Installation
-
-1. Install [Play-1.6.0](https://github.com/playframework/play1/releases/download/1.6.0/play-1.6.0.zip)] on your PC 
-2. Clone the repo
-   ```
-   git clone https://github.com/ki321g/WeatherTOP
-   ```
-3. Open command prompt navigate to your project directory
-4. Start Play
- ```
-   play run
-   ```
-6. Open Localhost URL
- ```
-   [play run](http://localhost:9000/)
-   ```
-
-  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
