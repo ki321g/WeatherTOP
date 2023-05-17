@@ -89,7 +89,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## Extras
-<img align="left" width="70%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="70%" src="readme/images/extras.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Extra Features
 - [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
