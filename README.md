@@ -117,13 +117,4 @@ Project Link: [https://github.com/ki321g/WeatherTOP/](https://github.com/ki321g/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
