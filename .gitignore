@@ -1,8 +1,10 @@
-tmp
-readme
+/readme/images/
+/tmp
+README.md
 .project
 .idea
 *.iml
 *.ipr
 *.iws
 *.class
+Template_*.*
