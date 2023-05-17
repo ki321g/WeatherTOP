@@ -11,7 +11,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#user-accounts">User Acoounts</a></li>
+    <li><a href="#user-accounts">User Accounts</a></li>
     <li><a href="#user-stations">User Stations</a></li>
     <li><a href="#user-readings">User Readings</a></li>
     <li><a href="#extras">Extra's</a></li>
