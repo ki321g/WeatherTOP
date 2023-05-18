@@ -31,7 +31,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 <!-- FEATURES -->
 ## User Accounts
-<img align="left" width="70%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Account Features
 - [x] Sign up and Login (both with Form Validation)
@@ -46,7 +46,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## User Stations
-<img align="left" width="70%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Station Features
 - [x] Create Station (Name , Longitude, Latitude)
@@ -62,7 +62,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## User Readings
-<img align="left" width="70%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Reading Features
 - [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
@@ -77,7 +77,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## Extras
-<img align="left" width="70%" src="readme/images/extras.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/extras.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Extra Features
 - [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
