@@ -30,6 +30,11 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FEATURES -->
+## Video: Project Walk Trhough
+[![Watch the video](readme/images/youtube.svg)](https://youtu.be/kmqXVC0wVdA)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FEATURES -->
 ## User Accounts
 <img align="left" width="65%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
