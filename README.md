@@ -29,9 +29,11 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 | <img src="readme/images/play-logo.png" style="height: 200px;">    | <img src="readme/images/bulma-logo.png">       |
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FEATURES -->
+<!-- VIDEO -->
 ## Video: Project Walk Through
-[![Watch the video](readme/images/youtube.svg)](https://youtu.be/kmqXVC0wVdA)
+<a href="https://youtu.be/kmqXVC0wVdA" target="_blank">
+ <img src="readme/images/youtube.svg" alt="Watch the video"/>
+</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FEATURES -->
