@@ -11,13 +11,14 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#live-demo">Live Demo</a></li>
+    <li><a href="#video-walk-through">Video Walk Through</a></li>
     <li><a href="#user-accounts">User Accounts</a></li>
     <li><a href="#user-stations">User Stations</a></li>
     <li><a href="#user-readings">User Readings</a></li>
     <li><a href="#extras">Extra's</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -29,9 +30,21 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 | <img src="readme/images/play-logo.png" style="height: 200px;">    | <img src="readme/images/bulma-logo.png">       |
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+## Live Demo
+Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- VIDEO -->
+## Video Walk Through
+<a href="https://youtu.be/kmqXVC0wVdA" target="_blank">
+ <img src="readme/images/youtube.svg" alt="Watch the video"/>
+</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- FEATURES -->
 ## User Accounts
-<img align="left" width="70%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-accounts.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Account Features
 - [x] Sign up and Login (both with Form Validation)
@@ -46,7 +59,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## User Stations
-<img align="left" width="70%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-stations.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Station Features
 - [x] Create Station (Name , Longitude, Latitude)
@@ -62,7 +75,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## User Readings
-<img align="left" width="70%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/user-readings.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Reading Features
 - [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
@@ -77,12 +90,12 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 
 
 ## Extras
-<img align="left" width="70%" src="readme/images/extras.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
+<img align="left" width="65%" src="readme/images/extras.gif" style="max-width: 95%;vertical-align:middle;margin:50px 0px"> 
 
 ### Extra Features
-- [x] Create (Date/Time, Code, Temperature, Wind Speed, Wind Direction, Pressure)
-- [x] Edit/Delete Readings
-- [x] Station Displays
+- [x] Delete Confirmation on Member, Stations & Readings
+- [x] Edit Readings
+- [x] Google Graphs intigrations
 
 <br><br><br><br><br><br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
