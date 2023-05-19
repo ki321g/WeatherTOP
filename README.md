@@ -11,6 +11,8 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#live-demo">Live Demo</a></li>
+    <li><a href="#video-walk-through">Video Walk Through</a></li>
     <li><a href="#user-accounts">User Accounts</a></li>
     <li><a href="#user-stations">User Stations</a></li>
     <li><a href="#user-readings">User Readings</a></li>
@@ -29,8 +31,12 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 | <img src="readme/images/play-logo.png" style="height: 200px;">    | <img src="readme/images/bulma-logo.png">       |
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+## Live Demo
+Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
+
 <!-- VIDEO -->
-## Video: Project Walk Through
+## Video Walk Through
 <a href="https://youtu.be/kmqXVC0wVdA" target="_blank">
  <img src="readme/images/youtube.svg" alt="Watch the video"/>
 </a>
