@@ -66,11 +66,11 @@ Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
 - [x] Delete Station
 - [x] Station Displays
     - [x] Latest weather with SVG moving icons/images
-    - [x] Temperature in Celsius & Fahrienheit
+    - [x] Temperature in Celsius & Fahrenheit
     - [x] Wind in km.hr & Bft (Beaufort)    
     - [x] Pressure in hPa
  - [x] Weather Min/Max Readings
- - [x] Weatehr Trends
+ - [x] Weather Trends
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -82,7 +82,7 @@ Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
 - [x] Edit/Delete Readings
 - [x] Station Displays
     - [x] Latest weather
-    - [x] Temperature in Celsius & Fahrienheit
+    - [x] Temperature in Celsius & Fahrenheit
     - [x] Wind in km.hr & Bft (Beaufort)    
     - [x] Pressure in hPa
 <br><br>
@@ -95,7 +95,7 @@ Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
 ### Extra Features
 - [x] Delete Confirmation on Member, Stations & Readings
 - [x] Edit Readings
-- [x] Google Graphs intigrations
+- [x] Google Graphs Integrations
 
 <br><br><br><br><br><br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
