@@ -34,6 +34,7 @@ WeatherTop Inc. produce a modular weather station called the WeatherTop 1000. Th
 <!-- LIVE DEMO -->
 ## Live Demo
 Link: [https://weathertop.cleverapps.io/](https://weathertop.cleverapps.io/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- VIDEO -->
 ## Video Walk Through
