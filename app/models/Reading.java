@@ -35,6 +35,7 @@ public class Reading extends Model {
    * @param pressure Reading pressure
    */
   public Reading(int code, double temperature, double windSpeed, double windDirection, int pressure) {
+    //Set Date Time, Overrides date/time in yaml file to set current date/time
     DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
     this.dateTime = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
 
