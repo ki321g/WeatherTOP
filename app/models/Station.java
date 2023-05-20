@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 /**
  * This model class is used for Stations
@@ -24,14 +25,23 @@ public class Station extends Model {
 
   @OneToMany(cascade = CascadeType.ALL)
   public List<Reading> readings = new ArrayList<Reading>();
+  @Transient
   public double minTemperature;
+  @Transient
   public double maxTemperature;
+  @Transient
   public int minPressure;
+  @Transient
   public int maxPressure;
+  @Transient
   public double minWindSpeed;
+  @Transient
   public double maxWindSpeed;
+  @Transient
   public String temperatureTrend;
+  @Transient
   public String windSpeedTrend;
+  @Transient
   public String pressureTrend;
 
   /**

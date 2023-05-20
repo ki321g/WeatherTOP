@@ -7,6 +7,8 @@ import play.db.jpa.Model;
 import javax.persistence.Entity;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+import java.util.Date;
 import java.util.Comparator;
 import java.util.List;
 
@@ -39,6 +41,25 @@ public class Reading extends Model {
     DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Create DateTimeFormatter
     this.dateTime = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
 
+    this.code = code;
+    this.temperature = temperature;
+    this.windSpeed = windSpeed;
+    this.windDirection = windDirection;
+    this.pressure = pressure;
+  }
+
+  /**
+   * Reading() - This Overloaded constructor creates the new Reading
+   *
+   * @param code Reading code
+   * @param temperature Reading temperature
+   * @param windSpeed Reading windSpeed
+   * @param windDirection Reading windDirection
+   * @param pressure Reading pressure
+   * @param dateTime Reading pressure
+   */
+  public Reading(int code, double temperature, double windSpeed, double windDirection, int pressure, Date dateTime) {
+    this.dateTime = dateTime.toString();
     this.code = code;
     this.temperature = temperature;
     this.windSpeed = windSpeed;
